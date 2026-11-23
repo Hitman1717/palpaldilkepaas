@@ -44,7 +44,30 @@ const CONFIG = {
     "ybu",
     "21112025",
     "forever"
-  ],
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
 
   // Digital Scratch-Off Cards (Sibling IOUs from Vybhu)
   scratchCards: [
@@ -76,7 +99,30 @@ const CONFIG = {
       desc: "Surprise gift on the way. You will have to wait a little – sorry, it's an unexpected delay for one scratch card that should be the last one.",
       footer: "Priceless Surprise 🎁"
     }
-  ],
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
 
   // Year 1 Wrapped Stats (Spotify-Style Story Cards)
   wrappedStories: [
@@ -128,51 +174,150 @@ const CONFIG = {
       desc: "Top Track: That one favorite romantic song that makes both of you smile in the car. Forever on repeat!",
       footer: "✨ Verdict: The Undefeated Power Couple"
     }
-  ],
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
 
   // Interactive Memory Map Locations (Leaflet.js)
   mapLocations: [
     {
-      title: "Day 1",
-      category: "First Moment",
-      coords: [13.0425, 80.2458],
-      zoom: 14,
-      desc: "Our wedding day – the beginning of everything.",
-      img: "assets/photos/pelli.jpg"
-    },
+      title: "Vizag – Harsha",
+      category: "Love Story",
+      coords: [17.6868, 83.2185    },
     {
-      title: "Day 2",
-      category: "Peace Place",
-      coords: [9.9312, 76.2673],
-      zoom: 13,
-      desc: "A serene beach getaway.",
-      img: "assets/photos/beach.jpg"
-    },
-    {
-      title: "Day 3",
-      category: "Autumn Laugh",
-      coords: [12.9716, 77.5946],
-      zoom: 15,
-      desc: "First autumn laugh together.",
-      img: "assets/photos/laugh.jpg"
-    },
-    {
-      title: "Day 4",
-      category: "Halloween Ghost",
-      coords: [13.0827, 80.2707],
-      zoom: 15,
-      desc: "Spooky fun on our first Halloween.",
-      img: "assets/photos/ghost.jpg"
-    },
-    {
-      title: "Day 5",
-      category: "80s Phase",
-      coords: [13.0827, 80.2707],
-      zoom: 15,
-      desc: "Our retro 80s phase together.",
-      img: "assets/photos/trad.jpg"
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
     }
-  ],
+];,
+      zoom: 14,
+      desc: "Harsha in Vizag.",
+      img: "assets/hearts/harsha-heart.jpg"
+    },
+    {
+      title: "Hyderabad – Vyshu",
+      category: "Wedding Venue",
+      coords: [17.4535, 78.3800    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
+      zoom: 14,
+      desc: "Daspalla Hotel, Jubilee Hills, Hyderabad.",
+      img: "assets/hearts/vyshu-heart.jpg"
+    },
+    {
+      title: "Toronto – Together",
+      category: "Future Home",
+      coords: [43.6426, -79.4368    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
+      zoom: 14,
+      desc: "15 Michael Power Place, Etobicoke, Canada.",
+      img: "assets/hearts/toronto-heart.jpg"
+    }
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
 
   // Couple Trivia Quiz ("Who's More Likely To?")
   triviaQuestions: [
@@ -206,7 +351,30 @@ const CONFIG = {
       reactionAkka: "Akka brings all the Bollywood sparkle and energy to the kitchen!",
       reactionBavs: "Bavs has signature dance moves that belong in a comedy special!"
     }
-  ],
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
 
   // Family Wish Wall Pre-collected Data
   familyWishes: [
@@ -234,7 +402,30 @@ const CONFIG = {
       img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
       voiceNoteTitle: "Friends Toast 🎙️"
     }
-  ]
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];
 };
 
 /* ==========================================================================
@@ -250,7 +441,30 @@ const AppState = {
   audioContext: null,
   synthInterval: null,
   leafletMap: null,
-  mapMarkers: []
+  mapMarkers: [    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];
 };
 
 /* ==========================================================================
@@ -345,12 +559,58 @@ if (document.readyState === 'loading') {
 function initFloatingHearts() {
   const container = elements.heartsBg;
   if (!container) return;
-  const hearts = ['❤️', '💖', '✨', '💍', '🌸', '🥂'];
+  const hearts = ['❤️', '💖', '✨', '💍', '🌸', '🥂'    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
   for (let i = 0; i < 18; i++) {
     const heart = document.createElement('div');
     heart.className = 'floating-heart';
-    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
     heart.style.left = `${Math.random() * 100}%`;
     heart.style.animationDuration = `${9 + Math.random() * 8}s`;
     heart.style.animationDelay = `${Math.random() * 7}s`;
@@ -401,7 +661,30 @@ function checkPasscode() {
   const inputVal = (elements.passcodeInput.value || '').trim().toLowerCase();
 
   // Clean special characters like dots, slashes, hyphens in date format
-  const sanitized = inputVal.replace(/[\/\-\.\s]/g, '');
+  const sanitized = inputVal.replace(/[\/\-\.\s    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];/g, '');
 
   const isCorrect = CONFIG.passcodes.some(code => {
     return sanitized === code.toLowerCase();
@@ -529,7 +812,30 @@ function startRomanticSynth() {
       293.66, 369.99, 440.00, 587.33, // D major
       196.00, 246.94, 293.66, 392.00, // G major
       220.00, 277.18, 329.63, 440.00  // A major
-    ];
+        },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
     let noteIdx = 0;
     function playNextNote() {
@@ -541,7 +847,30 @@ function startRomanticSynth() {
 
       // Kalimba / Glockenspiel warm sine sound
       osc.type = 'sine';
-      osc.frequency.setValueAtTime(notes[noteIdx], ctx.currentTime);
+      osc.frequency.setValueAtTime(notes[noteIdx    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];, ctx.currentTime);
 
       // Soft envelope
       const now = ctx.currentTime;
@@ -634,11 +963,57 @@ function initWrappedStories() {
   // Touch Swipe for mobile
   let touchStartX = 0;
   elements.wrappedCard.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
+    touchStartX = e.changedTouches[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];.screenX;
   }, { passive: true });
 
   elements.wrappedCard.addEventListener('touchend', (e) => {
-    const touchEndX = e.changedTouches[0].screenX;
+    const touchEndX = e.changedTouches[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];.screenX;
     if (touchStartX - touchEndX > 45) {
       goToStory(AppState.currentStoryIdx + 1);
     } else if (touchEndX - touchStartX > 45) {
@@ -652,7 +1027,30 @@ function renderStory(idx) {
   if (idx < 0 || idx >= stories.length) return;
 
   AppState.currentStoryIdx = idx;
-  const item = stories[idx];
+  const item = stories[idx    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
   // Update Progress bars
   stories.forEach((_, sIdx) => {
@@ -740,12 +1138,58 @@ function initThenNowSlider() {
   // Touch Events for Mobile
   container.addEventListener('touchstart', (e) => {
     isDragging = true;
-    setSliderPosition(e.touches[0].clientX);
+    setSliderPosition(e.touches[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];.clientX);
   }, { passive: true });
 
   window.addEventListener('touchmove', (e) => {
     if (!isDragging) return;
-    setSliderPosition(e.touches[0].clientX);
+    setSliderPosition(e.touches[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];.clientX);
   }, { passive: true });
 
   window.addEventListener('touchend', () => {
@@ -775,7 +1219,30 @@ function initMemoryMap() {
 
   try {
     const locations = CONFIG.mapLocations;
-    const initialLocation = locations[0];
+    const initialLocation = locations[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
     // Initialize Map with clean warm tiles (CartoDB Positron / OSM)
     const map = L.map('memory-map', {
@@ -809,13 +1276,105 @@ function initMemoryMap() {
     const heartIcon = L.divIcon({
       className: 'custom-leaflet-heart',
       html: '<div style="background:#721226;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);border:2px solid #c99a3e;font-size:16px;">💖</div>',
-      iconSize: [34, 34],
-      iconAnchor: [17, 17],
-      popupAnchor: [0, -18]
+      iconSize: [34, 34    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
+      iconAnchor: [17, 17    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
+      popupAnchor: [0, -18    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];
     });
 
     // Add markers
-    AppState.mapMarkers = [];
+    AppState.mapMarkers = [    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
     locations.forEach((loc, index) => {
       const popupHtml = `
         <div class="map-popup-card">
@@ -849,10 +1408,102 @@ function initMemoryMap() {
         pill.classList.add('active');
 
         const pinId = parseInt(pill.getAttribute('data-pin-id'), 10);
-        if (locations[pinId] && AppState.mapMarkers[pinId]) {
-          const loc = locations[pinId];
+        if (locations[pinId    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+]; && AppState.mapMarkers[pinId    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];) {
+          const loc = locations[pinId    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
           map.flyTo(loc.coords, loc.zoom || 14, { duration: 1.2 });
-          AppState.mapMarkers[pinId].openPopup();
+          AppState.mapMarkers[pinId    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];.openPopup();
         }
       });
     });
@@ -900,7 +1551,30 @@ function initTriviaQuiz() {
 function renderQuizQuestion(idx) {
   AppState.currentQuizIdx = idx;
   const total = CONFIG.triviaQuestions.length;
-  const item = CONFIG.triviaQuestions[idx];
+  const item = CONFIG.triviaQuestions[idx    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
   elements.quizStep.textContent = `Question ${idx + 1} of ${total}`;
   elements.quizProgressFill.style.width = `${((idx + 1) / total) * 100}%`;
@@ -913,8 +1587,54 @@ function renderQuizQuestion(idx) {
 }
 
 function handleQuizAnswer(choice) {
-  AppState.quizScores[choice]++;
-  const item = CONFIG.triviaQuestions[AppState.currentQuizIdx];
+  AppState.quizScores[choice    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];++;
+  const item = CONFIG.triviaQuestions[AppState.currentQuizIdx    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
   elements.optionAkkaBtn.classList.toggle('selected', choice === 'akka');
   elements.optionBavsBtn.classList.toggle('selected', choice === 'bavs');
@@ -952,7 +1672,30 @@ function initScratchCards() {
     { canvasId: 'scratch-canvas-2', badgeId: 'scratch-badge-2' },
     { canvasId: 'scratch-canvas-3', badgeId: 'scratch-badge-3' },
     { canvasId: 'scratch-canvas-4', badgeId: 'scratch-badge-4' }
-  ];
+      },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
   cards.forEach(card => {
     setupCanvasScratch(card.canvasId, card.badgeId);
@@ -1012,7 +1755,30 @@ function setupCanvasScratch(canvasId, badgeId) {
       const totalPixels = pixels.length / 4;
 
       for (let i = 3; i < pixels.length; i += 16) {
-        if (pixels[i] === 0) {
+        if (pixels[i    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+]; === 0) {
           transparentPixels += 4;
         }
       }
@@ -1059,7 +1825,30 @@ function setupCanvasScratch(canvasId, badgeId) {
   canvas.addEventListener('touchstart', (e) => {
     isScratching = true;
     const rect = canvas.getBoundingClientRect();
-    const touch = e.touches[0];
+    const touch = e.touches[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
     const x = (touch.clientX - rect.left) * (canvas.width / rect.width);
     const y = (touch.clientY - rect.top) * (canvas.height / rect.height);
     scratch(x, y);
@@ -1068,7 +1857,30 @@ function setupCanvasScratch(canvasId, badgeId) {
   canvas.addEventListener('touchmove', (e) => {
     if (!isScratching) return;
     const rect = canvas.getBoundingClientRect();
-    const touch = e.touches[0];
+    const touch = e.touches[0    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
     const x = (touch.clientX - rect.left) * (canvas.width / rect.width);
     const y = (touch.clientY - rect.top) * (canvas.height / rect.height);
     scratch(x, y);
@@ -1116,14 +1928,60 @@ function initWishWall() {
     const btn = e.target.closest('.voice-note-pill');
     if (btn) {
       const idx = btn.getAttribute('data-voice-idx');
-      const author = wishes[idx]?.author || 'Family';
+      const author = wishes[idx    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];?.author || 'Family';
       btn.innerHTML = '<span>🔊</span> Playing blessings...';
 
       // Play brief pleasant chime
       playBlessingChime();
 
       setTimeout(() => {
-        btn.innerHTML = `<span>▶</span> ${wishes[idx].voiceNoteTitle}`;
+        btn.innerHTML = `<span>▶</span> ${wishes[idx    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];.voiceNoteTitle}`;
       }, 3500);
     }
   });
@@ -1133,7 +1991,30 @@ function playBlessingChime() {
   try {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const ctx = new AudioContext();
-    const freqs = [523.25, 659.25, 783.99, 1046.50]; // C Major chord chime
+    const freqs = [523.25, 659.25, 783.99, 1046.50    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];; // C Major chord chime
     freqs.forEach((freq, idx) => {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -1183,7 +2064,30 @@ function initSiblingLetter() {
    12. STICKY NAV ACTIVE HIGHLIGHT
    ========================================================================== */
 function initNavigationHighlight() {
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];');
   const navLinks = document.querySelectorAll('.nav-link');
 
   window.addEventListener('scroll', () => {
@@ -1219,8 +2123,54 @@ function launchConfetti() {
   canvas.height = window.innerHeight;
 
   const count = 90;
-  const particles = [];
-  const colors = ['#721226', '#c99a3e', '#f1dfa8', '#ff6b8b', '#ffffff', '#e84393'];
+  const particles = [    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
+  const colors = ['#721226', '#c99a3e', '#f1dfa8', '#ff6b8b', '#ffffff', '#e84393'    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];;
 
   for (let i = 0; i < count; i++) {
     particles.push({
@@ -1229,7 +2179,30 @@ function launchConfetti() {
       vx: (Math.random() - 0.5) * 14,
       vy: (Math.random() - 0.9) * 16,
       size: Math.random() * 8 + 4,
-      color: colors[Math.floor(Math.random() * colors.length)],
+      color: colors[Math.floor(Math.random() * colors.length)    },
+    {
+      author: "From a loving friend",
+      message: `To my favourite couple, Akka & Bavs, ❤️
+
+Happiest 1st anniversary to you two!! 🥹❤️
+
+I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing each other every single day.
+
+From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you two are just so ridiculously cute together. The way you match each other's energy, understand each other's craziness and balance one another makes me feel like you were always meant to find each other.
+
+I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over silly things, stealing each other's food, laughing at the most random stuff and making a million little memories together.
+
+I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most importantly, unlimited food to share (or fight over 😭).
+
+No matter how far away you are, you'll always have a little piece of home cheering for you both.
+
+Love you both so much! Here's to forever ❤️🧿
+
+Happy 1st anniversary!! 🥂`,
+      img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+      voiceNoteTitle: "Anniversary Wishes 🎙️"
+    }
+];,
       rotation: Math.random() * 360,
       rotationSpeed: (Math.random() - 0.5) * 10,
       opacity: 1,

@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Celebrating the 1st Anniversary of Akka & Bavs - 365 Days of Love, Laughter & Togetherness.">
+  <meta name="description"
+    content="Celebrating the 1st Anniversary of Akka & Bavs - 365 Days of Love, Laughter & Togetherness.">
   <meta name="theme-color" content="#800020">
-  
+
   <title>Happy 1st Anniversary Akka & Bavs! 💕💍</title>
-  
+
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
-  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Leaflet CSS for Interactive Memory Map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- ==============================================
@@ -38,17 +45,10 @@
       </div>
       <h1 class="lock-title">Akka & Bavs</h1>
       <p class="lock-subtitle">Enter the wedding date to unlock our memory vault</p>
-      
+
       <div class="passcode-input-group">
-        <input 
-          type="text" 
-          id="passcode-input" 
-          class="passcode-input" 
-          placeholder="DDMMYYYY (e.g. 24112025)" 
-          maxlength="10" 
-          autocomplete="off"
-          aria-label="Enter passcode"
-        >
+        <input type="text" id="passcode-input" class="passcode-input" placeholder="DDMMYYYY (e.g. 24112025)"
+          maxlength="10" autocomplete="off" aria-label="Enter passcode">
         <button id="unlock-btn" class="btn btn-primary unlock-btn" type="button">
           <span>Unlock With Love</span> ✨
         </button>
@@ -64,7 +64,7 @@
 
       <div id="hint-box" class="hint-box hidden">
         <p><strong>Clue:</strong> The day two soulmates officially tied the knot! 💍<br>
-        Format: <code>DDMMYYYY</code> (or try <code>24112025</code> or simply <code>1234</code>)</p>
+          Format: <code>DDMMYYYY</code> (or try <code>24112025</code> or simply <code>1234</code>)</p>
       </div>
     </div>
   </div>
@@ -79,7 +79,8 @@
        FLOATING MUSIC TOGGLE & CONTROLS
        ============================================== -->
   <aside class="floating-music-widget" aria-label="Music Player">
-    <button id="music-toggle-btn" class="music-pill" title="Toggle Background Music" aria-label="Toggle background music">
+    <button id="music-toggle-btn" class="music-pill" title="Toggle Background Music"
+      aria-label="Toggle background music">
       <div class="music-wave" id="music-wave">
         <span class="bar bar-1"></span>
         <span class="bar bar-2"></span>
@@ -104,7 +105,7 @@
         <span class="brand-dot">✦</span>
         <span class="brand-sub">Year 1</span>
       </a>
-      
+
       <div class="nav-links-scroll">
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#counter-section" class="nav-link">Timer</a>
@@ -121,19 +122,14 @@
   </header>
 
   <main id="main-content">
-    
+
     <!-- ==============================================
          1. HERO SECTION
          ============================================== -->
     <section id="hero" class="hero-section">
       <div class="hero-backdrop">
-        <img 
-          id="hero-img"
-          src="assets/photos/first.jpg" 
-          alt="Akka & Bavs Wedding Celebration" 
-          class="hero-img"
-          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=80';"
-        >
+        <img id="hero-img" src="assets/photos/first.jpg" alt="Akka & Bavs Wedding Celebration" class="hero-img"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=80';">
         <div class="hero-overlay"></div>
       </div>
 
@@ -144,7 +140,8 @@
         <h1 class="hero-title">Happy 1st Anniversary</h1>
         <h2 class="hero-names">Akka & Bavs</h2>
         <p class="hero-quote">
-          "One full year of infinite love, stolen smiles, midnight laughs, and a million memories that will last a lifetime."
+          "One full year of infinite love, stolen smiles, midnight laughs, and a million memories that will last a
+          lifetime."
         </p>
 
         <div class="hero-buttons">
@@ -155,7 +152,34 @@
 
       <div class="scroll-down-prompt">
         <span>Scroll Down</span>
-        <div class="mouse-icon"><div class="wheel"></div></div>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anniversary Message -->
+    <section id="anniversary-message" class="section-padding">
+      <div class="container">
+        <h2 class="section-title text-center">To my favourite couple, Akka &amp; Bavs, ❤️</h2>
+        <p class="text-center" style="font-size:1.2rem; line-height:1.6;">
+          Happiest 1st anniversary to you two!! 🥹❤️<br><br>
+          I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most
+          unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love
+          is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing
+          each other every single day.<br><br>
+          From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you
+          two are just so ridiculously cute together. The way you match each other's energy, understand each other's
+          craziness and balance one another makes me feel like you were always meant to find each other.<br><br>
+          I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over
+          silly things, stealing each other's food, laughing at the most random stuff and making a million little
+          memories together.<br><br>
+          I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most
+          importantly, unlimited food to share (or fight over 😭).<br><br>
+          No matter how far away you are, you'll always have a little piece of home cheering for you both.<br><br>
+          Love you both so much! Here's to forever ❤️🧿<br><br>
+          Happy 1st anniversary!! 🥂
+        </p>
       </div>
     </section>
 
@@ -227,11 +251,15 @@
           <!-- Navigation Controls -->
           <div class="wrapped-controls">
             <button class="wrapped-nav-btn prev" id="wrapped-prev-btn" aria-label="Previous story">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
             </button>
             <div class="wrapped-counter" id="wrapped-counter">Card 1 / 6</div>
             <button class="wrapped-nav-btn next" id="wrapped-next-btn" aria-label="Next story">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
             </button>
           </div>
         </div>
@@ -246,7 +274,8 @@
         <div class="section-header text-center">
           <span class="section-tag">OUR LOVE STORY</span>
           <h2 class="section-title">Milestones of Year 1</h2>
-          <p class="section-desc">From our wedding day to our favorite spontaneous trips, laugh attacks, and goofy memories.</p>
+          <p class="section-desc">From our wedding day to our favorite spontaneous trips, laugh attacks, and goofy
+            memories.</p>
         </div>
 
         <div class="timeline-track" id="timeline-track">
@@ -257,12 +286,8 @@
               <div class="timeline-date">Day 1 • First Moment</div>
               <h3 class="timeline-title">Our Wedding Day</h3>
               <div class="timeline-img-box">
-                <img 
-                  src="assets/photos/pelli.jpg" 
-                  alt="Our Wedding Day" 
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='assets/photos/timeline-1.jpg';"
-                >
+                <img src="assets/photos/pelli.jpg" alt="Our Wedding Day" loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/photos/timeline-1.jpg';">
               </div>
               <p class="timeline-text">
                 Our wedding day – the beginning of everything.
@@ -278,12 +303,8 @@
               <div class="timeline-date">Day 2 • Peace Place</div>
               <h3 class="timeline-title">Peace Place Beach Getaway</h3>
               <div class="timeline-img-box">
-                <img 
-                  src="assets/photos/beach.jpg" 
-                  alt="Peace Place Beach Getaway" 
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='assets/photos/timeline-3.jpg';"
-                >
+                <img src="assets/photos/beach.jpg" alt="Peace Place Beach Getaway" loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/photos/timeline-3.jpg';">
               </div>
               <p class="timeline-text">
                 A serene beach getaway.
@@ -299,12 +320,8 @@
               <div class="timeline-date">Day 3 • Autumn Laugh</div>
               <h3 class="timeline-title">First Autumn Laugh</h3>
               <div class="timeline-img-box">
-                <img 
-                  src="assets/photos/laugh.jpg" 
-                  alt="First Autumn Laugh" 
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='assets/photos/timeline-4.jpg';"
-                >
+                <img src="assets/photos/laugh.jpg" alt="First Autumn Laugh" loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/photos/timeline-4.jpg';">
               </div>
               <p class="timeline-text">
                 First autumn laugh together.
@@ -320,12 +337,8 @@
               <div class="timeline-date">Day 4 • Halloween Ghost</div>
               <h3 class="timeline-title">First Halloween Ghost</h3>
               <div class="timeline-img-box">
-                <img 
-                  src="assets/photos/ghost.jpg" 
-                  alt="First Halloween Ghost" 
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='assets/photos/timeline-5.jpg';"
-                >
+                <img src="assets/photos/ghost.jpg" alt="First Halloween Ghost" loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/photos/timeline-5.jpg';">
               </div>
               <p class="timeline-text">
                 Spooky fun on our first Halloween.
@@ -341,12 +354,8 @@
               <div class="timeline-date">Day 5 • 80s Phase</div>
               <h3 class="timeline-title">Our Retro 80s Phase</h3>
               <div class="timeline-img-box">
-                <img 
-                  src="assets/photos/trad.jpg" 
-                  alt="Our Retro 80s Phase" 
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='assets/photos/timeline-6.jpg';"
-                >
+                <img src="assets/photos/trad.jpg" alt="Our Retro 80s Phase" loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/photos/timeline-6.jpg';">
               </div>
               <p class="timeline-text">
                 Our retro 80s phase together.
@@ -362,15 +371,12 @@
               <div class="timeline-date">365 Days Later</div>
               <h3 class="timeline-title">Happy 1st Anniversary!</h3>
               <div class="timeline-img-box">
-                <img 
-                  src="assets/photos/yest.jpg" 
-                  alt="1 Year Anniversary" 
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='assets/photos/first.jpg';"
-                >
+                <img src="assets/photos/yest.jpg" alt="1 Year Anniversary" loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/photos/first.jpg';">
               </div>
               <p class="timeline-text">
-                One complete revolution around the sun as husband and wife! May every year be even richer, sweeter, and full of laughter.
+                One complete revolution around the sun as husband and wife! May every year be even richer, sweeter, and
+                full of laughter.
               </p>
               <div class="timeline-tag">#PaperAnniversary #YearOneDone #AkkaAndBavs</div>
             </div>
@@ -393,23 +399,15 @@
         <div class="comparison-slider-container" id="comparison-slider">
           <!-- "Now" Image (Background) -->
           <div class="img-wrapper now-wrapper">
-            <img 
-              id="img-now"
-              src="assets/photos/smirk.jpg" 
-              alt="Akka & Bavs Now (Year 1)" 
-              onerror="this.onerror=null; this.src='assets/photos/now.jpg';"
-            >
+            <img id="img-now" src="assets/photos/smirk.jpg" alt="Akka & Bavs Now (Year 1)"
+              onerror="this.onerror=null; this.src='assets/photos/now.jpg';">
             <span class="slider-badge badge-now">Now • Year 1 Cozy 🌸</span>
           </div>
 
           <!-- "Then" Image (Foreground, clipped) -->
           <div class="img-wrapper then-wrapper" id="then-wrapper">
-            <img 
-              id="img-then"
-              src="assets/photos/cutepic.jpg" 
-              alt="Akka & Bavs Then (Wedding Day)" 
-              onerror="this.onerror=null; this.src='assets/photos/then.jpg';"
-            >
+            <img id="img-then" src="assets/photos/cutepic.jpg" alt="Akka & Bavs Then (Wedding Day)"
+              onerror="this.onerror=null; this.src='assets/photos/then.jpg';">
             <span class="slider-badge badge-then">Then • Wedding Day 👑</span>
           </div>
 
@@ -476,14 +474,14 @@
           <!-- Active Question Area -->
           <div class="quiz-content" id="quiz-content">
             <h3 class="quiz-question" id="quiz-question">Loading trivia question...</h3>
-            
+
             <div class="quiz-options-grid">
               <button class="quiz-option-btn akka-btn" id="option-akka-btn" type="button">
                 <span class="option-avatar">👰</span>
                 <span class="option-name">Akka</span>
                 <span class="option-sub">The Queen</span>
               </button>
-              
+
               <div class="quiz-vs-badge">VS</div>
 
               <button class="quiz-option-btn bavs-btn" id="option-bavs-btn" type="button">
@@ -523,7 +521,8 @@
         <div class="section-header text-center">
           <span class="section-tag">SIBLING IOU COUPONS</span>
           <h2 class="section-title">Scratch & Win From Vybhu</h2>
-          <p class="section-desc">Rub your finger or mouse across the shiny gold foil to uncover your anniversary gift coupons!</p>
+          <p class="section-desc">Rub your finger or mouse across the shiny gold foil to uncover your anniversary gift
+            coupons!</p>
         </div>
 
         <div class="scratch-cards-grid">
@@ -532,7 +531,8 @@
             <div class="scratch-reward">
               <div class="reward-icon">🎨</div>
               <h4 class="reward-title">The Couple Cartoon Pass</h4>
-              <p class="reward-desc">I'll turn you two into cartoon characters! A personalised cute illustration of Akka and Bavs, made by me, just for you.</p>
+              <p class="reward-desc">I'll turn you two into cartoon characters! A personalised cute illustration of Akka
+                and Bavs, made by me, just for you.</p>
               <span class="reward-claim-tag">Redeem anytime • Made with love 💗</span>
             </div>
             <canvas class="scratch-canvas" id="scratch-canvas-1" width="300" height="220"></canvas>
@@ -544,7 +544,8 @@
             <div class="scratch-reward">
               <div class="reward-icon">👩🏻‍🍳</div>
               <h4 class="reward-title">Chef's Special</h4>
-              <p class="reward-desc">I'll Cook for You! One delicious homemade meal made with love, specially for you two.</p>
+              <p class="reward-desc">I'll Cook for You! One delicious homemade meal made with love, specially for you
+                two.</p>
               <span class="reward-claim-tag">Redeem when you're in India 🇮🇳</span>
             </div>
             <canvas class="scratch-canvas" id="scratch-canvas-2" width="300" height="220"></canvas>
@@ -556,7 +557,8 @@
             <div class="scratch-reward">
               <div class="reward-icon">🏆</div>
               <h4 class="reward-title">The Bavs & Akka Awards</h4>
-              <p class="reward-desc">A personalised award ceremony made by me, with hilarious categories like Biggest Food Thief, Drama King, Secret Softie and Best Couple.</p>
+              <p class="reward-desc">A personalised award ceremony made by me, with hilarious categories like Biggest
+                Food Thief, Drama King, Secret Softie and Best Couple.</p>
               <span class="reward-claim-tag">One exclusive awards night ✨</span>
             </div>
             <canvas class="scratch-canvas" id="scratch-canvas-3" width="300" height="220"></canvas>
@@ -568,7 +570,8 @@
             <div class="scratch-reward">
               <div class="reward-icon">🎁</div>
               <h4 class="reward-title">Surprise Gift</h4>
-              <p class="reward-desc">Surprise gift on the way. You will have to wait a little – sorry, it's an unexpected delay for one scratch card that should be the last one.</p>
+              <p class="reward-desc">Surprise gift on the way. You will have to wait a little – sorry, it's an
+                unexpected delay for one scratch card that should be the last one.</p>
               <span class="reward-claim-tag">Priceless Surprise 🎁</span>
             </div>
             <canvas class="scratch-canvas" id="scratch-canvas-4" width="300" height="220"></canvas>
@@ -586,7 +589,8 @@
         <div class="section-header text-center">
           <span class="section-tag">WALL OF BLESSINGS</span>
           <h2 class="section-title">Messages from the Family</h2>
-          <p class="section-desc">Secretly gathered wishes, love notes, and warm smiles from those who love you most.</p>
+          <p class="section-desc">Secretly gathered wishes, love notes, and warm smiles from those who love you most.
+          </p>
         </div>
 
         <div class="polaroid-grid" id="polaroid-grid">
@@ -610,7 +614,8 @@
           <div class="envelope" id="envelope-element">
             <!-- Envelope Flap & Seal -->
             <div class="envelope-flap" id="envelope-flap"></div>
-            <button class="wax-seal" id="wax-seal-btn" title="Click to break the seal and read" aria-label="Open letter">
+            <button class="wax-seal" id="wax-seal-btn" title="Click to break the seal and read"
+              aria-label="Open letter">
               <span>❤️</span>
             </button>
 
@@ -623,13 +628,19 @@
               <h3 class="letter-salutation">Dearest Akka & Bavs,</h3>
               <div class="letter-body">
                 <p>
-                  I honestly cannot believe a whole year has already passed since the wedding day! It feels like just yesterday we were all scrambling with outfits, practicing dance moves, and watching you two take those sacred vows with the biggest smiles on your faces.
+                  I honestly cannot believe a whole year has already passed since the wedding day! It feels like just
+                  yesterday we were all scrambling with outfits, practicing dance moves, and watching you two take those
+                  sacred vows with the biggest smiles on your faces.
                 </p>
                 <p>
-                  Akka, seeing you this happy, cherished, and glowing in your first year of marriage has brought so much peace and joy to all of us. And Bavs, thank you for being the most patient, caring, and loving partner to my sister — and the coolest brother-in-law anyone could ask for. You officially survived 365 days of Akka's culinary experiments, indecisive food orders, and mood swings with flying colors! 🏆
+                  Akka, seeing you this happy, cherished, and glowing in your first year of marriage has brought so much
+                  peace and joy to all of us. And Bavs, thank you for being the most patient, caring, and loving partner
+                  to my sister — and the coolest brother-in-law anyone could ask for. You officially survived 365 days
+                  of Akka's culinary experiments, indecisive food orders, and mood swings with flying colors! 🏆
                 </p>
                 <p>
-                  May your love, laughter, and camaraderie only multiply with every passing year. May you travel the world together, eat all the best food, and always keep that sparkle in your eyes.
+                  May your love, laughter, and camaraderie only multiply with every passing year. May you travel the
+                  world together, eat all the best food, and always keep that sparkle in your eyes.
                 </p>
                 <p>
                   Happy 1st Wedding Anniversary! Here’s to a hundred more years of being the ultimate dream team.
@@ -663,7 +674,7 @@
         Crafted with love, laughter, and countless cups of chai.<br>
         100% Client-Side Gift • Hostable on GitHub Pages / Netlify / Vercel
       </p>
-      
+
       <div class="footer-links">
         <a href="#hero" class="back-to-top">↑ Back to Top</a>
         <button id="celebrate-again-btn" class="footer-celebrate-btn">Trigger Confetti 🎊</button>
@@ -676,9 +687,11 @@
   </footer>
 
   <!-- Leaflet JS for Map -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <!-- Main Application Script -->
   <script src="script.js"></script>
 </body>
+
 </html>
