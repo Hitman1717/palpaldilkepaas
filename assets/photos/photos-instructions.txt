@@ -1,0 +1,14 @@
+Place your personal photos here:
+
+1. hero.jpg       - High-res favorite wedding/reception photo for the top banner
+2. then.jpg       - Dressed-up wedding day photo for the "Then vs Now" slider
+3. now.jpg        - Cozy, goofy, or happy Year 1 photo for the "Then vs Now" slider
+4. timeline-1.jpg - Wedding Day / Muhurtham
+5. timeline-2.jpg - Sangeet / Reception / Dance night
+6. timeline-3.jpg - Honeymoon getaway
+7. timeline-4.jpg - First festival together (Diwali, etc.)
+8. timeline-5.jpg - Cozy home / Sunday moments
+9. timeline-6.jpg - 1-Year Milestone celebration
+
+Format tip: .jpg or .webp files under 500KB load fastest on mobile!
+If any photo is not added yet, the website gracefully falls back to curated sample wedding images with zero broken links.

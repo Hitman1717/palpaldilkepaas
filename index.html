@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Celebrating the 1st Anniversary of Akka & Bavs - 365 Days of Love, Laughter & Togetherness.">
+  <meta name="theme-color" content="#800020">
+  
+  <title>Happy 1st Anniversary Akka & Bavs! 💕💍</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS for Interactive Memory Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==============================================
+       LOCK SCREEN / WEDDING-DATE PASSCODE MODAL
+       ============================================== -->
+  <div id="lock-screen" class="lock-screen-overlay" role="dialog" aria-modal="true" aria-label="Passcode Screen">
+    <div class="lock-card">
+      <div class="lock-badge">✨ 1ST ANNIVERSARY VAULT ✨</div>
+      <div class="lock-monogram">
+        <span class="monogram-letter">A</span>
+        <span class="monogram-heart">❤️</span>
+        <span class="monogram-letter">B</span>
+      </div>
+      <h1 class="lock-title">Akka & Bavs</h1>
+      <p class="lock-subtitle">Enter the wedding date to unlock our memory vault</p>
+      
+      <div class="passcode-input-group">
+        <input 
+          type="text" 
+          id="passcode-input" 
+          class="passcode-input" 
+          placeholder="DDMMYYYY (e.g. 24112025)" 
+          maxlength="10" 
+          autocomplete="off"
+          aria-label="Enter passcode"
+        >
+        <button id="unlock-btn" class="btn btn-primary unlock-btn" type="button">
+          <span>Unlock With Love</span> ✨
+        </button>
+      </div>
+
+      <div class="passcode-error" id="passcode-error" aria-live="polite"></div>
+
+      <div class="lock-actions">
+        <button type="button" id="hint-toggle-btn" class="text-btn">💡 Need a Hint?</button>
+        <span class="divider">•</span>
+        <button type="button" id="quick-enter-btn" class="text-btn quick-enter">Peek Inside directly →</button>
+      </div>
+
+      <div id="hint-box" class="hint-box hidden">
+        <p><strong>Clue:</strong> The day two soulmates officially tied the knot! 💍<br>
+        Format: <code>DDMMYYYY</code> (or try <code>24112025</code> or simply <code>1234</code>)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       CANVAS PARTICLES & CONFETTI
+       ============================================== -->
+  <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+  <div id="hearts-bg" class="hearts-bg" aria-hidden="true"></div>
+
+  <!-- ==============================================
+       FLOATING MUSIC TOGGLE & CONTROLS
+       ============================================== -->
+  <aside class="floating-music-widget" aria-label="Music Player">
+    <button id="music-toggle-btn" class="music-pill" title="Toggle Background Music" aria-label="Toggle background music">
+      <div class="music-wave" id="music-wave">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+        <span class="bar bar-4"></span>
+      </div>
+      <span class="music-label" id="music-label">Wedding Song 🎵</span>
+    </button>
+    <!-- Background Audio Element -->
+    <audio id="bg-audio" loop preload="auto">
+      <source src="assets/music/wedding-song.mp3" type="audio/mp3">
+    </audio>
+  </aside>
+
+  <!-- ==============================================
+       STICKY NAVIGATION BAR
+       ============================================== -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">A & B</span>
+        <span class="brand-dot">✦</span>
+        <span class="brand-sub">Year 1</span>
+      </a>
+      
+      <div class="nav-links-scroll">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#counter-section" class="nav-link">Timer</a>
+        <a href="#wrapped-section" class="nav-link">Wrapped</a>
+        <a href="#timeline-section" class="nav-link">Timeline</a>
+        <a href="#then-now-section" class="nav-link">Then & Now</a>
+        <a href="#map-section" class="nav-link">Memory Map</a>
+        <a href="#quiz-section" class="nav-link">Trivia</a>
+        <a href="#scratch-section" class="nav-link">Coupons</a>
+        <a href="#wishes-section" class="nav-link">Wishes</a>
+        <a href="#letter-section" class="nav-link">Sibling Note</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- ==============================================
+         1. HERO SECTION
+         ============================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-backdrop">
+        <img 
+          id="hero-img"
+          src="assets/photos/hero.jpg" 
+          alt="Akka & Bavs Wedding Celebration" 
+          class="hero-img"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=80';"
+        >
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-pill-badge">
+          <span class="sparkle-icon">✨</span> 365 DAYS OF TOGETHERNESS <span class="sparkle-icon">✨</span>
+        </div>
+        <h1 class="hero-title">Happy 1st Anniversary</h1>
+        <h2 class="hero-names">Akka & Bavs</h2>
+        <p class="hero-quote">
+          "One full year of infinite love, stolen smiles, midnight laughs, and a million memories that will last a lifetime."
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#counter-section" class="btn btn-gold">See How Long We've Loved</a>
+          <a href="#wrapped-section" class="btn btn-outline-light">Year 1 Wrapped 🎧</a>
+        </div>
+      </div>
+
+      <div class="scroll-down-prompt">
+        <span>Scroll Down</span>
+        <div class="mouse-icon"><div class="wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         2. LIVE YEAR 1 COUNTER
+         ============================================== -->
+    <section id="counter-section" class="counter-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">THE LOVE TICKER</span>
+          <h2 class="section-title">Every Second With You</h2>
+          <p class="section-desc">Time flies when you're laughing, eating biryani, and loving your person.</p>
+        </div>
+
+        <div class="countdown-grid" id="countdown-grid">
+          <div class="countdown-card" data-tilt>
+            <div class="count-number" id="count-days">365</div>
+            <div class="count-label">Days</div>
+            <div class="count-sub">and counting</div>
+          </div>
+          <div class="countdown-card" data-tilt>
+            <div class="count-number" id="count-hours">00</div>
+            <div class="count-label">Hours</div>
+            <div class="count-sub">of warm hugs</div>
+          </div>
+          <div class="countdown-card" data-tilt>
+            <div class="count-number" id="count-minutes">00</div>
+            <div class="count-label">Minutes</div>
+            <div class="count-sub">of chai & chats</div>
+          </div>
+          <div class="countdown-card pulse-card" data-tilt>
+            <div class="count-number" id="count-seconds">00</div>
+            <div class="count-label">Seconds</div>
+            <div class="count-sub">of pure bliss</div>
+          </div>
+        </div>
+
+        <div class="counter-milestone-bar">
+          <div class="milestone-badge">
+            <span class="badge-icon">💖</span>
+            <span class="badge-text" id="milestone-text">365 Days • 52 Weeks • 8,760 Hours • 525,600 Heartbeats</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         3. YEAR 1 WRAPPED (SPOTIFY-STYLE STORY CARDS)
+         ============================================== -->
+    <section id="wrapped-section" class="wrapped-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">2025 - 2026 RECAP</span>
+          <h2 class="section-title">Akka & Bavs: Year 1 Wrapped</h2>
+          <p class="section-desc">The official numbers, inside jokes, and greatest hits of your first 365 days.</p>
+        </div>
+
+        <div class="wrapped-player-wrapper">
+          <!-- Story Progress Bars -->
+          <div class="story-progress-bar" id="story-progress-bar">
+            <!-- Dynamically populated via JS -->
+          </div>
+
+          <!-- Active Story Card Container -->
+          <div class="wrapped-card" id="wrapped-card">
+            <!-- Dynamic Content Injected via JS -->
+          </div>
+
+          <!-- Navigation Controls -->
+          <div class="wrapped-controls">
+            <button class="wrapped-nav-btn prev" id="wrapped-prev-btn" aria-label="Previous story">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="wrapped-counter" id="wrapped-counter">Card 1 / 6</div>
+            <button class="wrapped-nav-btn next" id="wrapped-next-btn" aria-label="Next story">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         4. SCROLL-DRIVEN MILESTONE TIMELINE
+         ============================================== -->
+    <section id="timeline-section" class="timeline-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">OUR LOVE STORY</span>
+          <h2 class="section-title">Milestones of Year 1</h2>
+          <p class="section-desc">From the sacred muhurtham fire to our cozy Sunday routines.</p>
+        </div>
+
+        <div class="timeline-track" id="timeline-track">
+          <!-- Milestone 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-marker"><span>💍</span></div>
+            <div class="timeline-card">
+              <div class="timeline-date">The Beginning • Day 1</div>
+              <h3 class="timeline-title">The Muhurtham & Sacred Vows</h3>
+              <div class="timeline-img-box">
+                <img 
+                  src="assets/photos/timeline-1.jpg" 
+                  alt="Wedding Muhurtham" 
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609234656388-0ff363383899?auto=format&fit=crop&w=800&q=80';"
+                >
+              </div>
+              <p class="timeline-text">
+                Surrounded by sacred chants, flowers, and family tears of joy, Akka and Bavs tied the knot. Two best friends made a lifetime pact!
+              </p>
+              <div class="timeline-tag">#TheBeginning #MrAndMrs</div>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-marker"><span>💃</span></div>
+            <div class="timeline-card">
+              <div class="timeline-date">The Celebration</div>
+              <h3 class="timeline-title">The Grand Sangeet & Reception</h3>
+              <div class="timeline-img-box">
+                <img 
+                  src="assets/photos/timeline-2.jpg" 
+                  alt="Sangeet & Dance" 
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80';"
+                >
+              </div>
+              <p class="timeline-text">
+                Dressed to perfection, showing off the sweetest couple dance, and having the time of your lives while everyone cheered.
+              </p>
+              <div class="timeline-tag">#DanceFloorFire #PureJoy</div>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-marker"><span>🌴</span></div>
+            <div class="timeline-card">
+              <div class="timeline-date">The Getaway</div>
+              <h3 class="timeline-title">Honeymoon Escapades</h3>
+              <div class="timeline-img-box">
+                <img 
+                  src="assets/photos/timeline-3.jpg" 
+                  alt="Honeymoon Memories" 
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';"
+                >
+              </div>
+              <p class="timeline-text">
+                Golden beach sunsets, peaceful morning coffees, and getting lost in scenic alleys with zero worries in the world.
+              </p>
+              <div class="timeline-tag">#HoneymoonVibes #JustUs</div>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item right">
+            <div class="timeline-marker"><span>🪔</span></div>
+            <div class="timeline-card">
+              <div class="timeline-date">First Festival</div>
+              <h3 class="timeline-title">First Diwali Together</h3>
+              <div class="timeline-img-box">
+                <img 
+                  src="assets/photos/timeline-4.jpg" 
+                  alt="Festival Celebrations" 
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80';"
+                >
+              </div>
+              <p class="timeline-text">
+                Traditional ethnic outfits, sweet boxes galore, lighting diyas together, and hosting the family with heartwarming hospitality.
+              </p>
+              <div class="timeline-tag">#FestiveLove #DiwaliLights</div>
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="timeline-item left">
+            <div class="timeline-marker"><span>🏡</span></div>
+            <div class="timeline-card">
+              <div class="timeline-date">Home Sweet Home</div>
+              <h3 class="timeline-title">Building Our Cozy Nest</h3>
+              <div class="timeline-img-box">
+                <img 
+                  src="assets/photos/timeline-5.jpg" 
+                  alt="Cozy Home Moments" 
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80';"
+                >
+              </div>
+              <p class="timeline-text">
+                Assembling furniture, arguing about plant placement, binge-watching Netflix on Sundays, and mastering the art of midnight snacking.
+              </p>
+              <div class="timeline-tag">#OurHome #SundayChill</div>
+            </div>
+          </div>
+
+          <!-- Milestone 6 -->
+          <div class="timeline-item right">
+            <div class="timeline-marker"><span>🥂</span></div>
+            <div class="timeline-card highlight-card">
+              <div class="timeline-date">365 Days Later</div>
+              <h3 class="timeline-title">Happy 1st Anniversary!</h3>
+              <div class="timeline-img-box">
+                <img 
+                  src="assets/photos/timeline-6.jpg" 
+                  alt="1 Year Anniversary" 
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80';"
+                >
+              </div>
+              <p class="timeline-text">
+                One complete revolution around the sun as husband and wife! May every year be even richer, sweeter, and full of laughter.
+              </p>
+              <div class="timeline-tag">#PaperAnniversary #YearOneDone</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         5. "THEN VS. NOW" INTERACTIVE PHOTO SLIDER
+         ============================================== -->
+    <section id="then-now-section" class="then-now-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">BEFORE & AFTER</span>
+          <h2 class="section-title">Then vs. Now</h2>
+          <p class="section-desc">Drag the heart handle across to see how love only gets sweeter with time.</p>
+        </div>
+
+        <div class="comparison-slider-container" id="comparison-slider">
+          <!-- "Now" Image (Background) -->
+          <div class="img-wrapper now-wrapper">
+            <img 
+              id="img-now"
+              src="assets/photos/now.jpg" 
+              alt="Akka & Bavs Now (Year 1)" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1200&q=80';"
+            >
+            <span class="slider-badge badge-now">Now • Year 1 Cozy 🌸</span>
+          </div>
+
+          <!-- "Then" Image (Foreground, clipped) -->
+          <div class="img-wrapper then-wrapper" id="then-wrapper">
+            <img 
+              id="img-then"
+              src="assets/photos/then.jpg" 
+              alt="Akka & Bavs Then (Wedding Day)" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80';"
+            >
+            <span class="slider-badge badge-then">Then • Wedding Day 👑</span>
+          </div>
+
+          <!-- Draggable Divider Handle -->
+          <div class="slider-handle" id="slider-handle" role="slider" aria-label="Photo comparison slider" tabindex="0">
+            <div class="handle-line"></div>
+            <div class="handle-circle">
+              <span class="handle-icon">↔</span>
+            </div>
+            <div class="handle-line"></div>
+          </div>
+        </div>
+
+        <p class="slider-hint text-center">💡 Tip: Drag left or right (or swipe on your phone) to compare!</p>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         6. INTERACTIVE MEMORY MAP
+         ============================================== -->
+    <section id="map-section" class="map-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">OUR SACRED SPOTS</span>
+          <h2 class="section-title">Interactive Memory Map</h2>
+          <p class="section-desc">Tap on any heart pin to revisit the places where your story unfolded.</p>
+        </div>
+
+        <!-- Quick filter / Jump pills -->
+        <div class="map-pills-bar" id="map-pills">
+          <button class="map-pill active" data-pin-id="0">🏰 Wedding Venue</button>
+          <button class="map-pill" data-pin-id="1">🏝️ Honeymoon</button>
+          <button class="map-pill" data-pin-id="2">☕ Favorite Cafe</button>
+          <button class="map-pill" data-pin-id="3">🏡 Home Sweet Home</button>
+        </div>
+
+        <!-- Leaflet Map Container -->
+        <div class="map-container-wrapper">
+          <div id="memory-map" class="memory-map-box"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         7. COUPLE TRIVIA: "WHO'S MORE LIKELY TO?"
+         ============================================== -->
+    <section id="quiz-section" class="quiz-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">COUPLE SHOWDOWN</span>
+          <h2 class="section-title">Who's More Likely To...?</h2>
+          <p class="section-desc">Tap through these 6 fun questions together to determine the ultimate verdict!</p>
+        </div>
+
+        <div class="quiz-card-wrapper" id="quiz-wrapper">
+          <!-- Quiz Step Counter & Progress -->
+          <div class="quiz-header">
+            <span class="quiz-step" id="quiz-step">Question 1 of 6</span>
+            <div class="quiz-progress-track">
+              <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+            </div>
+          </div>
+
+          <!-- Active Question Area -->
+          <div class="quiz-content" id="quiz-content">
+            <h3 class="quiz-question" id="quiz-question">Loading trivia question...</h3>
+            
+            <div class="quiz-options-grid">
+              <button class="quiz-option-btn akka-btn" id="option-akka-btn" type="button">
+                <span class="option-avatar">👰</span>
+                <span class="option-name">Akka</span>
+                <span class="option-sub">The Queen</span>
+              </button>
+              
+              <div class="quiz-vs-badge">VS</div>
+
+              <button class="quiz-option-btn bavs-btn" id="option-bavs-btn" type="button">
+                <span class="option-avatar">🤵</span>
+                <span class="option-name">Bavs</span>
+                <span class="option-sub">The Gentleman</span>
+              </button>
+            </div>
+
+            <div class="quiz-feedback-box hidden" id="quiz-feedback">
+              <p class="feedback-text" id="feedback-text"></p>
+              <button class="btn btn-primary next-quiz-btn" id="quiz-next-btn">Next Question →</button>
+            </div>
+          </div>
+
+          <!-- Quiz Results Screen (Hidden initially) -->
+          <div class="quiz-results hidden" id="quiz-results">
+            <div class="results-badge">🏆 100% COMPATIBILITY 🏆</div>
+            <h3 class="results-title">The Undefeated Power Couple!</h3>
+            <p class="results-desc">
+              Whether it's deciding dinner or dancing through life, you two complement each other perfectly.
+            </p>
+            <div class="results-stats" id="results-stats">
+              <!-- Dynamically populated -->
+            </div>
+            <button class="btn btn-gold" id="quiz-restart-btn">Play Again 🔄</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         8. DIGITAL SCRATCH-OFF CARDS
+         ============================================== -->
+    <section id="scratch-section" class="scratch-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">SIBLING IOU COUPONS</span>
+          <h2 class="section-title">Scratch & Win From Rohit</h2>
+          <p class="section-desc">Rub your finger or mouse across the shiny gold foil to uncover your anniversary gift coupons!</p>
+        </div>
+
+        <div class="scratch-cards-grid">
+          <!-- Card 1 -->
+          <div class="scratch-card-item">
+            <div class="scratch-reward">
+              <div class="reward-icon">🍲</div>
+              <h4 class="reward-title">Royal Biryani Feast</h4>
+              <p class="reward-desc">Full feast with starters & dessert at your favorite restaurant — 100% paid by me!</p>
+              <span class="reward-claim-tag">No Expiration Date 🎟️</span>
+            </div>
+            <canvas class="scratch-canvas" id="scratch-canvas-1" width="300" height="220"></canvas>
+            <div class="scratch-badge-revealed hidden" id="scratch-badge-1">REVEALED! ✨</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="scratch-card-item">
+            <div class="scratch-reward">
+              <div class="reward-icon">🤐</div>
+              <h4 class="reward-title">48-Hr No-Teasing Pass</h4>
+              <p class="reward-desc">Immunity for Akka! I will not tease you, argue, or steal your food for 48 hours straight.</p>
+              <span class="reward-claim-tag">Priceless Luxury 👑</span>
+            </div>
+            <canvas class="scratch-canvas" id="scratch-canvas-2" width="300" height="220"></canvas>
+            <div class="scratch-badge-revealed hidden" id="scratch-badge-2">REVEALED! ✨</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="scratch-card-item">
+            <div class="scratch-reward">
+              <div class="reward-icon">🎬</div>
+              <h4 class="reward-title">Movie Night VIP Combo</h4>
+              <p class="reward-desc">Two Recliner Cinema Tickets + Large Caramel Popcorn & Soda on the house!</p>
+              <span class="reward-claim-tag">Any Weekend Of Choice 🍿</span>
+            </div>
+            <canvas class="scratch-canvas" id="scratch-canvas-3" width="300" height="220"></canvas>
+            <div class="scratch-badge-revealed hidden" id="scratch-badge-3">REVEALED! ✨</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="scratch-card-item">
+            <div class="scratch-reward">
+              <div class="reward-icon">📸</div>
+              <h4 class="reward-title">Chauffeur & Photographer</h4>
+              <p class="reward-desc">One full day of personal photography, bags carrying, and driving duty anywhere you go!</p>
+              <span class="reward-claim-tag">5-Star Concierge Service ⭐</span>
+            </div>
+            <canvas class="scratch-canvas" id="scratch-canvas-4" width="300" height="220"></canvas>
+            <div class="scratch-badge-revealed hidden" id="scratch-badge-4">REVEALED! ✨</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         9. FAMILY & FRIENDS WISH WALL
+         ============================================== -->
+    <section id="wishes-section" class="wishes-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">WALL OF BLESSINGS</span>
+          <h2 class="section-title">Messages from the Family</h2>
+          <p class="section-desc">Secretly gathered wishes, love notes, and warm smiles from those who love you most.</p>
+        </div>
+
+        <div class="polaroid-grid" id="polaroid-grid">
+          <!-- Wishes dynamically populated from script.js CONFIG -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         10. SIBLING CLOSING LOVE LETTER
+         ============================================== -->
+    <section id="letter-section" class="letter-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">FROM THE BOTTOM OF MY HEART</span>
+          <h2 class="section-title">A Special Letter For You Both</h2>
+          <p class="section-desc">Tap the royal wax seal to open this secret letter.</p>
+        </div>
+
+        <div class="envelope-wrapper">
+          <div class="envelope" id="envelope-element">
+            <!-- Envelope Flap & Seal -->
+            <div class="envelope-flap" id="envelope-flap"></div>
+            <button class="wax-seal" id="wax-seal-btn" title="Click to break the seal and read" aria-label="Open letter">
+              <span>❤️</span>
+            </button>
+
+            <!-- Letter Paper inside -->
+            <div class="letter-paper" id="letter-paper">
+              <div class="letter-header">
+                <span class="letter-date">November 2026</span>
+                <span class="letter-tag">365 Days of Akka & Bavs</span>
+              </div>
+              <h3 class="letter-salutation">Dearest Akka & Bavs,</h3>
+              <div class="letter-body">
+                <p>
+                  I honestly cannot believe a whole year has already passed since the wedding day! It feels like just yesterday we were all scrambling with outfits, practicing dance moves, and watching you two take those sacred vows with the biggest smiles on your faces.
+                </p>
+                <p>
+                  Akka, seeing you this happy, cherished, and glowing in your first year of marriage has brought so much peace and joy to all of us. And Bavs, thank you for being the most patient, caring, and loving partner to my sister — and the coolest brother-in-law anyone could ask for. You officially survived 365 days of Akka's culinary experiments, indecisive food orders, and mood swings with flying colors! 🏆
+                </p>
+                <p>
+                  May your love, laughter, and camaraderie only multiply with every passing year. May you travel the world together, eat all the best food, and always keep that sparkle in your eyes.
+                </p>
+                <p>
+                  Happy 1st Wedding Anniversary! Here’s to a hundred more years of being the ultimate dream team.
+                </p>
+              </div>
+              <div class="letter-signature">
+                <p class="sign-with-love">With all the love in the world,</p>
+                <p class="sign-name">Rohit</p>
+                <span class="sign-role">(Your favorite sibling & permanent third-wheel 😜)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="envelope-hint text-center">
+          <button class="btn btn-outline-dark" id="toggle-letter-btn">Open / Close Letter ✉️</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <div class="footer-heart">💖</div>
+      <h3 class="footer-title">Akka & Bavs — 1 Year Down, Forever To Go</h3>
+      <p class="footer-text">
+        Crafted with love, laughter, and countless cups of chai.<br>
+        100% Client-Side Gift • Hostable on GitHub Pages / Netlify / Vercel
+      </p>
+      
+      <div class="footer-links">
+        <a href="#hero" class="back-to-top">↑ Back to Top</a>
+        <button id="celebrate-again-btn" class="footer-celebrate-btn">Trigger Confetti 🎊</button>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Made for Akka & Bavs by Rohit.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS for Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Main Application Script -->
+  <script src="script.js"></script>
+</body>
+</html>

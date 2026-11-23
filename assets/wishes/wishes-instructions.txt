@@ -1,0 +1,10 @@
+Place family & friend wish wall photos or voice notes here:
+
+- mom-dad.jpg      - Photo of Amma & Appa
+- inlaws.jpg       - Photo of Bavs's parents / in-laws
+- cousins.jpg      - Group photo of Rohit & cousins
+- friends.jpg      - Photo of best friends
+
+Optional voice notes:
+- mom-dad.mp3
+- cousins.mp3

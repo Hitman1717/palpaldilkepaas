@@ -1,0 +1,7 @@
+Drop your background music here!
+
+Recommended file name:
+- wedding-song.mp3
+
+Tip: Keep the file under ~4MB so it loads smoothly on mobile devices without buffering.
+If this file is absent, the website automatically falls back to an enchanting romantic music box melody using the browser's Web Audio API!
