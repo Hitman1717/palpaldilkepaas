@@ -10,7 +10,44 @@
    EASY CUSTOMIZATION CONFIG
    Edit any value in this block to personalize the website!
    ========================================================================== */
-const CONFIG = {
+// Google Maps API key (replace with your own)
+const GOOGLE_MAPS_API_KEY = "YOUR_API_KEY_HERE";
+
+// Year 1 Wrapped Stats (Scratch Cards)
+wrappedStories: [
+  {
+    badge: "SCRATH 1 OF 4",
+    icon: "🎨",
+    stat: "",
+    title: "The Couple Cartoon Pass",
+    desc: "I'll turn you two into cartoon characters! A personalised cute illustration of Akka and Bavs, made by me, just for you.",
+    footer: "Redeem anytime • Made with love 💗"
+  },
+  {
+    badge: "SCRATH 2 OF 4",
+    icon: "👩🏻🍳",
+    stat: "",
+    title: "Chef's Special",
+    desc: "I'll Cook for You! One delicious homemade meal made with love, specially for you two.",
+    footer: "Redeem when you're in India 🇮🇳"
+  },
+  {
+    badge: "SCRATH 3 OF 4",
+    icon: "🏆",
+    stat: "",
+    title: "The Bavs & Akka Awards",
+    desc: "A personalised award ceremony made by me, with hilarious categories like Biggest Food Thief, Drama King, Secret Softie and Best Couple.",
+    footer: "One exclusive awards night ✨"
+  },
+  {
+    badge: "SCRATH 4 OF 4",
+    icon: "🎁",
+    stat: "",
+    title: "Surprise Gift",
+    desc: "Surprise gift on the way. You will have to wait a little – sorry, it's an unexpected delay for one scratch card that should be the last one.",
+    footer: ""
+  }
+],
   // Couple Names
   names: {
     bride: "Akka",
@@ -20,7 +57,7 @@ const CONFIG = {
 
   // Wedding Date & Time (YYYY-MM-DDTHH:MM:SS)
   // Used for the live ticking counter
-  weddingDate: "2025-11-24T09:30:00",
+  weddingDate: "2025-11-23T08:45:00",
 
   // Accepted Passcodes for the Lock Screen (Case-insensitive)
   // DDMMYYYY, short pins, nicknames, or common inside jokes
@@ -48,34 +85,34 @@ const CONFIG = {
     {
       badge: "STORY 2 OF 6",
       icon: "🤔",
-      stat: "540+",
-      title: "The 'What Should We Eat?' Debates",
-      desc: "99% of conversations started with 'Whatever you want' and ended with 'No, not that'. Mastered the art of compromise!",
-      footer: "🍕 Top Choice: Biryani & Dessert"
+      stat: "",
+      title: "THE FOOD THIEF",
+      desc: "I'm not hungry ... until the other's food arrives!\n\nQuestion: Who is more likely to say \"I'm not hungry\" and then eat from the other's plate?",
+      footer: "Award: Official Plate Inspector."
     },
     {
       badge: "STORY 3 OF 6",
-      icon: "☕",
-      stat: "1,460",
-      title: "Cups of Chai Shared",
-      desc: "From rushed morning sips to cozy evening chats on the balcony. Bavs's tea-making rating: Certified 9.9/10!",
-      footer: "🫖 Official Drink of Year 1"
+      icon: "🍽️",
+      stat: "",
+      title: "FOODIE SOULMATES",
+      desc: "Food tastes better when shared. Countless meals, favourite dishes, and absolutely no intention of sharing equally.",
+      footer: "Award: Partners in Every Meal."
     },
     {
       badge: "STORY 4 OF 6",
-      icon: "🍳",
-      stat: "No. 1",
-      title: "Midnight Masterchefs",
-      desc: "Top culinary achievement: 2 AM spicy noodles, experimental pasta, and surprise sweet treats from the fridge.",
-      footer: "👨‍🍳 Kitchen Chemistry Level: Expert"
+      icon: "🤝",
+      stat: "",
+      title: "OPPOSITES ATTRACT",
+      desc: "One gets sick easily, while the other refuses to take tablets for almost anything!",
+      footer: "Award: The Opposites Attract Duo."
     },
     {
       badge: "STORY 5 OF 6",
-      icon: "🛍️",
-      stat: "15,000+",
-      title: "Mall Steps Logged",
-      desc: "Akka shopping: 3 hours. Bavs holding the shopping bags with a polite smile: Priceless and undefeated!",
-      footer: "👜 Ultimate Shopping Partner"
+      icon: "🤫",
+      stat: "",
+      title: "THE SECRET SOFTIE",
+      desc: "Behind all the teasing, arguments, and drama, there's always someone making sure the other feels loved.",
+      footer: "Award: Certified Softie in Disguise."
     },
     {
       badge: "STORY 6 OF 6",
@@ -90,36 +127,44 @@ const CONFIG = {
   // Interactive Memory Map Locations (Leaflet.js)
   mapLocations: [
     {
-      title: "Wedding Mandapam",
-      category: "Where Forever Began",
-      coords: [13.0425, 80.2458], // Customizable coordinates
+      title: "Day 1",
+      category: "First Moment",
+      coords: [13.0425, 80.2458],
       zoom: 14,
-      desc: "The sacred day, Vedic chants, floral garland exchange, and heartfelt vows.",
-      img: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80"
+      desc: "Our wedding day – the beginning of everything.",
+      img: "assets/photos/pelli.jpg"
     },
     {
-      title: "Honeymoon Paradise",
-      category: "Beach & Mountain Escapes",
-      coords: [9.9312, 76.2673], // Kerala / Beach coast
+      title: "Day 2",
+      category: "Peace Place",
+      coords: [9.9312, 76.2673],
       zoom: 13,
-      desc: "Golden sunsets, endless coastal walks, and our very first romantic trip as newlyweds.",
-      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+      desc: "A serene beach getaway.",
+      img: "assets/photos/peace place as beach.jpg"
     },
     {
-      title: "Favorite Date Night Cafe",
-      category: "Chai & Conversations",
+      title: "Day 3",
+      category: "Autumn Laugh",
       coords: [12.9716, 77.5946],
       zoom: 15,
-      desc: "The cozy corner table where we spend hours talking about life, dreams, and everything in between.",
-      img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80"
+      desc: "First autumn laugh together.",
+      img: "assets/photos/first autumn laugh.jpg"
     },
     {
-      title: "Home Sweet Home",
-      category: "Our Cozy Haven",
+      title: "Day 4",
+      category: "Halloween Ghost",
       coords: [13.0827, 80.2707],
       zoom: 15,
-      desc: "Sunday morning lazy breakfasts, plant parenting, laughter, and infinite comfort.",
-      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80"
+      desc: "Spooky fun on our first Halloween.",
+      img: "assets/photos/first halloween ghost.jpg"
+    },
+    {
+      title: "Day 5",
+      category: "80s Phase",
+      coords: [13.0827, 80.2707],
+      zoom: 15,
+      desc: "Our retro 80s phase together.",
+      img: "assets/photos/our 80s phase trad.jpg"
     }
   ],
 
@@ -337,7 +382,7 @@ function initPasscodeScreen() {
 
 function checkPasscode() {
   const inputVal = (elements.passcodeInput.value || '').trim().toLowerCase();
-  
+
   // Clean special characters like dots, slashes, hyphens in date format
   const sanitized = inputVal.replace(/[\/\-\.\s]/g, '');
 
@@ -360,7 +405,7 @@ function checkPasscode() {
 function unlockSite() {
   AppState.isUnlocked = true;
   elements.lockScreen.classList.add('unlocked');
-  
+
   // Launch celebration confetti burst!
   launchConfetti();
   setTimeout(() => launchConfetti(), 400);
@@ -472,7 +517,7 @@ function startRomanticSynth() {
     let noteIdx = 0;
     function playNextNote() {
       if (!AppState.isMusicPlaying || !AppState.audioContext) return;
-      
+
       const ctx = AppState.audioContext;
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -1042,7 +1087,7 @@ function initWishWall() {
       const idx = btn.getAttribute('data-voice-idx');
       const author = wishes[idx]?.author || 'Family';
       btn.innerHTML = '<span>🔊</span> Playing blessings...';
-      
+
       // Play brief pleasant chime
       playBlessingChime();
 
