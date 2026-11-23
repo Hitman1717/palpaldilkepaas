@@ -63,7 +63,7 @@ Runs entirely in the browser with **zero backend or database setup required**. C
 9. **🪙 Digital Scratch-Off Cards (Sibling IOUs)**:
    - HTML5 Canvas scratch cards with shimmering gold/silver foil coating.
    - Rub with finger or mouse to scrub off the foil:
-     - 🍛 *Royal Biryani Feast* (Paid by Rohit)
+     - 🍛 *Royal Biryani Feast* (Paid by Vybhu)
      - 🤐 *48-Hour Zero Teasing Pass* (Immunity for Akka!)
      - 🎬 *Movie Night VIP Combo* (Recliner tickets + jumbo popcorn)
      - 📸 *Personal Chauffeur & Instagram Photographer* for a day
@@ -76,7 +76,7 @@ Runs entirely in the browser with **zero backend or database setup required**. C
 
 11. **✉️ Interactive Wax-Sealed Sibling Love Letter**:
     - Vintage royal wax seal button.
-    - Click seal to open envelope and unveil the heartfelt letter from Rohit.
+    - Click seal to open envelope and unveil the heartfelt letter from Vybhu.
 
 ---
 
@@ -106,7 +106,7 @@ Open `script.js` and edit:
 names: {
   bride: "Akka",
   groom: "Bavs",
-  sibling: "Rohit"
+  sibling: "Vybhu"
 }
 ```
 

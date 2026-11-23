@@ -2,7 +2,7 @@
  * ============================================================================
  * Akka & Bavs — 1st Anniversary Website Engine
  * Fully Client-Side (Zero Server / DB required)
- * Built with Love by Rohit
+ * Built with Love by Vybhu
  * ============================================================================
  */
 
@@ -10,49 +10,15 @@
    EASY CUSTOMIZATION CONFIG
    Edit any value in this block to personalize the website!
    ========================================================================== */
-// Google Maps API key (replace with your own)
-const GOOGLE_MAPS_API_KEY = "YOUR_API_KEY_HERE";
+const CONFIG = {
+  // CARTO Basemaps API Key
+  cartoApiKey: "cb1_5eey_1_f0f536475eea4cd2eef1753f",
 
-// Year 1 Wrapped Stats (Scratch Cards)
-wrappedStories: [
-  {
-    badge: "SCRATH 1 OF 4",
-    icon: "🎨",
-    stat: "",
-    title: "The Couple Cartoon Pass",
-    desc: "I'll turn you two into cartoon characters! A personalised cute illustration of Akka and Bavs, made by me, just for you.",
-    footer: "Redeem anytime • Made with love 💗"
-  },
-  {
-    badge: "SCRATH 2 OF 4",
-    icon: "👩🏻🍳",
-    stat: "",
-    title: "Chef's Special",
-    desc: "I'll Cook for You! One delicious homemade meal made with love, specially for you two.",
-    footer: "Redeem when you're in India 🇮🇳"
-  },
-  {
-    badge: "SCRATH 3 OF 4",
-    icon: "🏆",
-    stat: "",
-    title: "The Bavs & Akka Awards",
-    desc: "A personalised award ceremony made by me, with hilarious categories like Biggest Food Thief, Drama King, Secret Softie and Best Couple.",
-    footer: "One exclusive awards night ✨"
-  },
-  {
-    badge: "SCRATH 4 OF 4",
-    icon: "🎁",
-    stat: "",
-    title: "Surprise Gift",
-    desc: "Surprise gift on the way. You will have to wait a little – sorry, it's an unexpected delay for one scratch card that should be the last one.",
-    footer: ""
-  }
-],
   // Couple Names
   names: {
     bride: "Akka",
     groom: "Bavs",
-    sibling: "Rohit"
+    sibling: "Vybhu"
   },
 
   // Wedding Date & Time (YYYY-MM-DDTHH:MM:SS)
@@ -63,13 +29,53 @@ wrappedStories: [
   // DDMMYYYY, short pins, nicknames, or common inside jokes
   passcodes: [
     "24112025",
+    "23112025",
     "2411",
+    "2311",
+    "24112024",
+    "23112024",
+    "241125",
+    "231125",
     "1234",
     "love",
     "akka",
     "bavs",
+    "vybhu",
+    "ybu",
     "21112025",
     "forever"
+  ],
+
+  // Digital Scratch-Off Cards (Sibling IOUs from Vybhu)
+  scratchCards: [
+    {
+      badge: "SCRATCH 1 OF 4",
+      icon: "🎨",
+      title: "The Couple Cartoon Pass",
+      desc: "I'll turn you two into cartoon characters! A personalised cute illustration of Akka and Bavs, made by me, just for you.",
+      footer: "Redeem anytime • Made with love 💗"
+    },
+    {
+      badge: "SCRATCH 2 OF 4",
+      icon: "👩🏻‍🍳",
+      title: "Chef's Special",
+      desc: "I'll Cook for You! One delicious homemade meal made with love, specially for you two.",
+      footer: "Redeem when you're in India 🇮🇳"
+    },
+    {
+      badge: "SCRATCH 3 OF 4",
+      icon: "🏆",
+      title: "The Bavs & Akka Awards",
+      desc: "A personalised award ceremony made by me, with hilarious categories like Biggest Food Thief, Drama King, Secret Softie and Best Couple.",
+      footer: "One exclusive awards night ✨"
+    },
+    {
+      badge: "SCRATCH 4 OF 4",
+      icon: "🎁",
+      title: "Surprise Gift",
+      desc: "Surprise gift on the way. You will have to wait a little – sorry, it's an unexpected delay for one scratch card that should be the last one.",
+      footer: "Priceless Surprise 🎁"
+    }
   ],
 
   // Year 1 Wrapped Stats (Spotify-Style Story Cards)
@@ -140,7 +146,7 @@ wrappedStories: [
       coords: [9.9312, 76.2673],
       zoom: 13,
       desc: "A serene beach getaway.",
-      img: "assets/photos/peace place as beach.jpg"
+      img: "assets/photos/beach.jpg"
     },
     {
       title: "Day 3",
@@ -148,7 +154,7 @@ wrappedStories: [
       coords: [12.9716, 77.5946],
       zoom: 15,
       desc: "First autumn laugh together.",
-      img: "assets/photos/first autumn laugh.jpg"
+      img: "assets/photos/laugh.jpg"
     },
     {
       title: "Day 4",
@@ -156,7 +162,7 @@ wrappedStories: [
       coords: [13.0827, 80.2707],
       zoom: 15,
       desc: "Spooky fun on our first Halloween.",
-      img: "assets/photos/first halloween ghost.jpg"
+      img: "assets/photos/ghost.jpg"
     },
     {
       title: "Day 5",
@@ -164,7 +170,7 @@ wrappedStories: [
       coords: [13.0827, 80.2707],
       zoom: 15,
       desc: "Our retro 80s phase together.",
-      img: "assets/photos/our 80s phase trad.jpg"
+      img: "assets/photos/trad.jpg"
     }
   ],
 
@@ -217,7 +223,7 @@ wrappedStories: [
       voiceNoteTitle: "Family Love Note 🎙️"
     },
     {
-      author: "The Sibling Gang (Rohit & Cousins)",
+      author: "The Sibling Gang (Vybhu & Cousins)",
       message: "Happy 1st Anniversary to the coolest couple! Bavs, thank you for handling Akka. Akka, thank you for feeding him. Treat is strictly pending on you both!",
       img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
       voiceNoteTitle: "Cousins Cheers 🎙️"
@@ -300,7 +306,7 @@ const elements = {
 /* ==========================================================================
    INITIALIZATION
    ========================================================================== */
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   initFloatingHearts();
   initPasscodeScreen();
   initMusicController();
@@ -320,7 +326,18 @@ document.addEventListener('DOMContentLoaded', () => {
       launchConfetti();
     });
   }
-});
+}
+
+// Make accessible on window for debugging / inline calls
+window.AppState = AppState;
+window.checkPasscode = checkPasscode;
+window.unlockSite = unlockSite;
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /* ==========================================================================
    1. FLOATING BACKGROUND HEARTS
@@ -766,11 +783,25 @@ function initMemoryMap() {
       zoomControl: true
     }).setView(initialLocation.coords, 12);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    const keyParam = CONFIG.cartoApiKey ? `?key=${CONFIG.cartoApiKey}` : '';
+    const cartoLayer = L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png${keyParam}`, {
       attribution: '&copy; OpenStreetMap &copy; CARTO',
       subdomains: 'abcd',
       maxZoom: 19
-    }).addTo(map);
+    });
+
+    // Fall back to standard OpenStreetMap tiles if CARTO has any network issues
+    cartoLayer.on('tileerror', () => {
+      if (!map._hasOsmFallback) {
+        map._hasOsmFallback = true;
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 19
+        }).addTo(map);
+      }
+    });
+
+    cartoLayer.addTo(map);
 
     AppState.leafletMap = map;
 
