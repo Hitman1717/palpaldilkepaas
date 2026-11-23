@@ -27,7 +27,7 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.5">
 </head>
 
 <body>
@@ -39,15 +39,15 @@
     <div class="lock-card">
       <div class="lock-badge">✨ 1ST ANNIVERSARY VAULT ✨</div>
       <div class="lock-monogram">
-        <span class="monogram-letter">A</span>
+        <span class="monogram-letter">V</span>
         <span class="monogram-heart">❤️</span>
-        <span class="monogram-letter">B</span>
+        <span class="monogram-letter">H</span>
       </div>
       <h1 class="lock-title">Akka & Bavs</h1>
       <p class="lock-subtitle">Enter the wedding date to unlock our memory vault</p>
 
       <div class="passcode-input-group">
-        <input type="text" id="passcode-input" class="passcode-input" placeholder="DDMMYYYY (e.g. 24112025)"
+        <input type="text" id="passcode-input" class="passcode-input" placeholder="DDMMYYYY (e.g. 23112025)"
           maxlength="10" autocomplete="off" aria-label="Enter passcode">
         <button id="unlock-btn" class="btn btn-primary unlock-btn" type="button">
           <span>Unlock With Love</span> ✨
@@ -87,10 +87,11 @@
         <span class="bar bar-3"></span>
         <span class="bar bar-4"></span>
       </div>
-      <span class="music-label" id="music-label">Wedding Song 🎵</span>
+      <span class="music-label" id="music-label">Urike Urike 🎵</span>
     </button>
     <!-- Background Audio Element -->
     <audio id="bg-audio" loop preload="auto">
+      <source src="assets/music/Urike%20Urike.mp3" type="audio/mp3">
       <source src="assets/music/wedding-song.mp3" type="audio/mp3">
     </audio>
   </aside>
@@ -115,8 +116,7 @@
         <a href="#map-section" class="nav-link">Memory Map</a>
         <a href="#quiz-section" class="nav-link">Trivia</a>
         <a href="#scratch-section" class="nav-link">Coupons</a>
-        <a href="#wishes-section" class="nav-link">Wishes</a>
-        <a href="#letter-section" class="nav-link">Sibling Note</a>
+        <a href="#letter-section" class="nav-link">Special Letters</a>
       </div>
     </nav>
   </header>
@@ -155,31 +155,6 @@
         <div class="mouse-icon">
           <div class="wheel"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- Anniversary Message -->
-    <section id="anniversary-message" class="section-padding">
-      <div class="container">
-        <h2 class="section-title text-center">To my favourite couple, Akka &amp; Bavs, ❤️</h2>
-        <p class="text-center" style="font-size:1.2rem; line-height:1.6;">
-          Happiest 1st anniversary to you two!! 🥹❤️<br><br>
-          I honestly think you both were made for each other. I mean, who else could fight over the tiniest, most
-          unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof that love
-          is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and still choosing
-          each other every single day.<br><br>
-          From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS 😭), you
-          two are just so ridiculously cute together. The way you match each other's energy, understand each other's
-          craziness and balance one another makes me feel like you were always meant to find each other.<br><br>
-          I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting over
-          silly things, stealing each other's food, laughing at the most random stuff and making a million little
-          memories together.<br><br>
-          I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most
-          importantly, unlimited food to share (or fight over 😭).<br><br>
-          No matter how far away you are, you'll always have a little piece of home cheering for you both.<br><br>
-          Love you both so much! Here's to forever ❤️🧿<br><br>
-          Happy 1st anniversary!! 🥂
-        </p>
       </div>
     </section>
 
@@ -426,27 +401,129 @@
     </section>
 
     <!-- ==============================================
-         6. INTERACTIVE MEMORY MAP
+         6. INTERACTIVE MEMORY MAP (3 HEART MAPS)
          ============================================== -->
     <section id="map-section" class="map-section section-padding">
       <div class="container">
+        <!-- SVG Definition for Heart Clip Path -->
+        <svg width="0" height="0" style="position: absolute; pointer-events: none;" aria-hidden="true">
+          <defs>
+            <clipPath id="heart-map-clip" clipPathUnits="objectBoundingBox">
+              <path
+                d="M 0.5, 0.94 C 0.16, 0.70, 0, 0.50, 0, 0.32 C 0, 0.13, 0.13, 0, 0.32, 0 C 0.43, 0, 0.47, 0.08, 0.5, 0.17 C 0.53, 0.08, 0.57, 0, 0.68, 0 C 0.87, 0, 1, 0.13, 1, 0.32 C 1, 0.50, 0.84, 0.70, 0.5, 0.94 Z" />
+            </clipPath>
+          </defs>
+        </svg>
+
         <div class="section-header text-center">
-          <span class="section-tag">OUR SACRED SPOTS</span>
-          <h2 class="section-title">Interactive Memory Map</h2>
-          <p class="section-desc">Tap on any heart pin to revisit the places where your story unfolded.</p>
+          <span class="section-tag">THREE CITIES, ONE LOVE</span>
+          <h2 class="section-title">Our Sacred Memory Hearts</h2>
+          <p class="section-desc">From where our journeys began to the place where our forever continues.</p>
         </div>
 
-        <!-- Quick filter / Jump pills -->
-        <div class="map-pills-bar" id="map-pills">
-          <button class="map-pill active" data-pin-id="0">🏰 Wedding Venue</button>
-          <button class="map-pill" data-pin-id="1">🏝️ Honeymoon</button>
-          <button class="map-pill" data-pin-id="2">☕ Favorite Cafe</button>
-          <button class="map-pill" data-pin-id="3">🏡 Home Sweet Home</button>
+        <!-- Global View Mode Switcher -->
+        <div class="map-view-pills">
+          <button class="view-pill active" id="toggle-all-art" type="button">🎨 Illustrated Hearts</button>
+          <button class="view-pill" id="toggle-all-live" type="button">🗺️ Live Interactive Maps</button>
         </div>
 
-        <!-- Leaflet Map Container -->
-        <div class="map-container-wrapper">
-          <div id="memory-map" class="memory-map-box"></div>
+        <!-- 3 Chutkus Heart Maps Grid -->
+        <div class="hearts-map-grid" id="hearts-map-grid">
+          <!-- Heart Map 1: Vizag -->
+          <div class="heart-map-card" data-card-id="0">
+            <div class="heart-map-wrapper">
+              <div class="heart-map-frame">
+                <div id="heart-map-0" class="heart-leaflet-map"></div>
+                <img src="assets/hearts/harsha-heart.jpg" alt="Vizag – Harsha" class="heart-art-img" id="heart-art-0">
+                <div class="heart-top-title">Vizag ♡</div>
+              </div>
+              <svg class="heart-border-svg" viewBox="0 0 100 94" preserveAspectRatio="none">
+                <path
+                  d="M 50, 94 C 16, 70, 0, 50, 0, 32 C 0, 13, 13, 0, 32, 0 C 43, 0, 47, 8, 50, 17 C 53, 8, 57, 0, 68, 0 C 87, 0, 100, 13, 100, 32 C 100, 50, 84, 70, 50, 94 Z"
+                  fill="none" stroke="#3d2314" stroke-width="4.5" />
+              </svg>
+            </div>
+            <div class="heart-card-info text-center">
+              <span class="heart-category-tag">❤️ Love Story</span>
+              <h3 class="heart-title">Vizag – Harsha</h3>
+              <p class="heart-desc">Harsha in Vizag.</p>
+              <div class="heart-actions">
+                <button type="button" class="btn-toggle-view toggle-heart-view" data-index="0">
+                  <span class="toggle-icon">🗺️</span> <span class="toggle-label">Interactive Map</span>
+                </button>
+                <a href="https://www.google.com/maps/search/?api=1&query=17.6868,83.2185" target="_blank"
+                  rel="noopener noreferrer" class="btn-gmaps-pill" title="Open in Google Maps">
+                  <span>Maps ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heart Map 2: Hyderabad -->
+          <div class="heart-map-card" data-card-id="1">
+            <div class="heart-map-wrapper">
+              <div class="heart-map-frame">
+                <div id="heart-map-1" class="heart-leaflet-map"></div>
+                <img src="assets/hearts/vyshu-heart.jpg" alt="Hyderabad – Vyshu" class="heart-art-img" id="heart-art-1">
+                <div class="heart-top-title">Hyderabad ♡</div>
+              </div>
+              <svg class="heart-border-svg" viewBox="0 0 100 94" preserveAspectRatio="none">
+                <path
+                  d="M 50, 94 C 16, 70, 0, 50, 0, 32 C 0, 13, 13, 0, 32, 0 C 43, 0, 47, 8, 50, 17 C 53, 8, 57, 0, 68, 0 C 87, 0, 100, 13, 100, 32 C 100, 50, 84, 70, 50, 94 Z"
+                  fill="none" stroke="#3d2314" stroke-width="4.5" />
+              </svg>
+            </div>
+            <div class="heart-card-info text-center">
+              <span class="heart-category-tag">💍 Wedding Venue</span>
+              <h3 class="heart-title">Hyderabad – Vyshu</h3>
+              <p class="heart-desc">Vyshu in Hyderabad</p>
+              <div class="heart-actions">
+                <button type="button" class="btn-toggle-view toggle-heart-view" data-index="1">
+                  <span class="toggle-icon">🗺️</span> <span class="toggle-label">Interactive Map</span>
+                </button>
+                <a href="https://www.google.com/maps/search/?api=1&query=17.4535,78.3800" target="_blank"
+                  rel="noopener noreferrer" class="btn-gmaps-pill" title="Open in Google Maps">
+                  <span>Maps ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heart Map 3: Toronto -->
+          <div class="heart-map-card" data-card-id="2">
+            <div class="heart-map-wrapper">
+              <div class="heart-map-frame">
+                <div id="heart-map-2" class="heart-leaflet-map"></div>
+                <img src="assets/hearts/toronto-heart.jpg" alt="Toronto – Together" class="heart-art-img"
+                  id="heart-art-2">
+                <div class="heart-top-title">Toronto ♡</div>
+              </div>
+              <svg class="heart-border-svg" viewBox="0 0 100 94" preserveAspectRatio="none">
+                <path
+                  d="M 50, 94 C 16, 70, 0, 50, 0, 32 C 0, 13, 13, 0, 32, 0 C 43, 0, 47, 8, 50, 17 C 53, 8, 57, 0, 68, 0 C 87, 0, 100, 13, 100, 32 C 100, 50, 84, 70, 50, 94 Z"
+                  fill="none" stroke="#3d2314" stroke-width="4.5" />
+              </svg>
+            </div>
+            <div class="heart-card-info text-center">
+              <span class="heart-category-tag">🏡 Future Home</span>
+              <h3 class="heart-title">Toronto – Together</h3>
+              <p class="heart-desc">
+                <a href="https://www.google.com/maps/search/15+Michael+Power+Place,+Etobicoke,+Canada?entry=gmail&source=g"
+                  target="_blank" rel="noopener noreferrer" class="map-text-link">
+                  15 Michael Power Place, Etobicoke, Canada 📍
+                </a>
+              </p>
+              <div class="heart-actions">
+                <button type="button" class="btn-toggle-view toggle-heart-view" data-index="2">
+                  <span class="toggle-icon">🗺️</span> <span class="toggle-label">Interactive Map</span>
+                </button>
+                <a href="https://www.google.com/maps/search/15+Michael+Power+Place,+Etobicoke,+Canada?entry=gmail&source=g"
+                  target="_blank" rel="noopener noreferrer" class="btn-gmaps-pill" title="Open in Google Maps">
+                  <span>Maps ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -582,82 +659,126 @@
     </section>
 
     <!-- ==============================================
-         9. FAMILY & FRIENDS WISH WALL
-         ============================================== -->
-    <section id="wishes-section" class="wishes-section section-padding">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">WALL OF BLESSINGS</span>
-          <h2 class="section-title">Messages from the Family</h2>
-          <p class="section-desc">Secretly gathered wishes, love notes, and warm smiles from those who love you most.
-          </p>
-        </div>
-
-        <div class="polaroid-grid" id="polaroid-grid">
-          <!-- Wishes dynamically populated from script.js CONFIG -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ==============================================
-         10. SIBLING CLOSING LOVE LETTER
+         9. TWO SPECIAL LETTERS (VYBHU & PARENTS)
          ============================================== -->
     <section id="letter-section" class="letter-section section-padding">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">FROM THE BOTTOM OF MY HEART</span>
-          <h2 class="section-title">A Special Letter For You Both</h2>
-          <p class="section-desc">Tap the royal wax seal to open this secret letter.</p>
+          <span class="section-tag">SEALED WITH ENDLESS LOVE</span>
+          <h2 class="section-title">Special Letters For You Both</h2>
+          <p class="section-desc">Words from the bottom of our hearts celebrating your first 365 days together.</p>
         </div>
 
-        <div class="envelope-wrapper">
-          <div class="envelope" id="envelope-element">
+        <!-- Letter 1: From Vybhu -->
+        <div class="envelope-wrapper letter-spacing-block">
+          <div class="envelope open" id="envelope-vybhu">
             <!-- Envelope Flap & Seal -->
-            <div class="envelope-flap" id="envelope-flap"></div>
-            <button class="wax-seal" id="wax-seal-btn" title="Click to break the seal and read"
-              aria-label="Open letter">
+            <div class="envelope-flap"></div>
+            <button class="wax-seal" id="wax-seal-vybhu" title="Wax seal" aria-label="Toggle Vybhu's letter">
               <span>❤️</span>
             </button>
 
             <!-- Letter Paper inside -->
-            <div class="letter-paper" id="letter-paper">
+            <div class="letter-paper" id="letter-paper-vybhu">
               <div class="letter-header">
-                <span class="letter-date">November 2026</span>
-                <span class="letter-tag">365 Days of Akka & Bavs</span>
+                <span class="letter-date">23 November 2026</span>
+                <span class="letter-tag">💌 From Vybhu • To Akka &amp; Bavs</span>
               </div>
-              <h3 class="letter-salutation">Dearest Akka & Bavs,</h3>
+              <h3 class="letter-salutation">To my favourite couple, Akka &amp; Bavs, ❤️</h3>
+              <p class="letter-subtitle-highlight">Happiest 1st anniversary to you two!! 🥹❤️</p>
               <div class="letter-body">
                 <p>
-                  I honestly cannot believe a whole year has already passed since the wedding day! It feels like just
-                  yesterday we were all scrambling with outfits, practicing dance moves, and watching you two take those
-                  sacred vows with the biggest smiles on your faces.
+                  I honestly think you both were made for each other. I mean, who else could fight over the tiniest,
+                  most
+                  unnecessary things one minute and be the cutest, most loving couple the next? 😂 You two are proof
+                  that
+                  love is not about agreeing on everything; sometimes it's about arguing over absolutely nothing and
+                  still
+                  choosing each other every single day.
                 </p>
                 <p>
-                  Akka, seeing you this happy, cherished, and glowing in your first year of marriage has brought so much
-                  peace and joy to all of us. And Bavs, thank you for being the most patient, caring, and loving partner
-                  to my sister — and the coolest brother-in-law anyone could ask for. You officially survived 365 days
-                  of Akka's culinary experiments, indecisive food orders, and mood swings with flying colors! 🏆
+                  From your silly fights and endless teasing to your shared love for food (my two biggest TINDIPOTUS
+                  😭),
+                  you two are just so ridiculously cute together. The way you match each other's energy, understand each
+                  other's craziness and balance one another makes me feel like you were always meant to find each other.
                 </p>
                 <p>
-                  May your love, laughter, and camaraderie only multiply with every passing year. May you travel the
-                  world together, eat all the best food, and always keep that sparkle in your eyes.
+                  I hope you never stop being this funny, goofy, annoying, loving version of yourselves. Keep fighting
+                  over silly things, stealing each other's food, laughing at the most random stuff and making a million
+                  little memories together.
                 </p>
                 <p>
-                  Happy 1st Wedding Anniversary! Here’s to a hundred more years of being the ultimate dream team.
+                  I wish you both a lifetime of happiness, endless love, good health, countless adventures and, most
+                  importantly, unlimited food to share (or fight over 😭).
+                </p>
+                <p>
+                  No matter how far away you are, you'll always have a little piece of home cheering for you both.
+                </p>
+                <p class="letter-highlight-text">
+                  Love you both so much! Here's to forever ❤️🧿<br>
+                  Happy 1st anniversary!! 🥂
                 </p>
               </div>
               <div class="letter-signature">
                 <p class="sign-with-love">With all the love in the world,</p>
                 <p class="sign-name">Vybhu</p>
-                <span class="sign-role">(Your favorite sibling & permanent third-wheel 😜)</span>
+                <span class="sign-role">(Your favorite sibling &amp; permanent third-wheel 😜)</span>
               </div>
             </div>
           </div>
+
+          <div class="envelope-hint text-center">
+            <button class="btn btn-outline-dark toggle-letter-single" data-target="envelope-vybhu">Fold / Open Letter
+              ✉️</button>
+          </div>
         </div>
 
-        <div class="envelope-hint text-center">
-          <button class="btn btn-outline-dark" id="toggle-letter-btn">Open / Close Letter ✉️</button>
+        <!-- Letter 2: From Parents (Amma & Nanna) -->
+        <div class="envelope-wrapper letter-spacing-block">
+          <div class="envelope open" id="envelope-parents">
+            <!-- Envelope Flap & Seal -->
+            <div class="envelope-flap"></div>
+            <button class="wax-seal wax-seal-gold" id="wax-seal-parents" title="Wax seal"
+              aria-label="Toggle Parents' letter">
+              <span>🪔</span>
+            </button>
+
+            <!-- Letter Paper inside -->
+            <div class="letter-paper letter-paper-parents" id="letter-paper-parents">
+              <div class="letter-header">
+                <span class="letter-date">23 November 2026</span>
+                <span class="letter-tag">🪔 From Amma &amp; Nanna • Blessings</span>
+              </div>
+              <h3 class="letter-salutation">Happy Wedding Anniversary, My Dear Vyshu &amp; Harsha! ❤️</h3>
+              <div class="letter-body">
+                <p>
+                  Marriage is a beautiful journey of love, trust, understanding and togetherness. Keep holding each
+                  other's hands, supporting each other's dreams and choosing each other every single day.
+                </p>
+                <p class="letter-highlight-special">
+                  Harsha, you will always have a special place in our heart. ❤️
+                </p>
+                <p>
+                  Wishing you both a lifetime of happiness, endless love and beautiful memories together.
+                </p>
+                <p class="letter-highlight-text">
+                  Stay blessed and keep smiling always! Lots of love, Amma &amp; Nanna ❤️
+                </p>
+              </div>
+              <div class="letter-signature">
+                <p class="sign-with-love">With endless blessings &amp; love,</p>
+                <p class="sign-name sign-parents">Amma &amp; Nanna</p>
+                <span class="sign-role">(Always praying for your happiness &amp; togetherness 🙏❤️)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="envelope-hint text-center">
+            <button class="btn btn-outline-dark toggle-letter-single" data-target="envelope-parents">Fold / Open Letter
+              ✉️</button>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -691,7 +812,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <!-- Main Application Script -->
-  <script src="script.js"></script>
+  <script src="script.js?v=2.5"></script>
 </body>
 
 </html>

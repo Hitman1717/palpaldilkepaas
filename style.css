@@ -552,12 +552,13 @@ body {
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 4rem 1.5rem 6rem;
+  padding: 2.5rem 1.5rem 4.5rem;
   overflow: hidden;
 }
 
@@ -571,13 +572,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.05);
+  object-position: center 10%;
+  transform: scale(1.02);
   animation: heroZoom 20s alternate infinite ease-in-out;
 }
 
 @keyframes heroZoom {
   0% { transform: scale(1.02); }
-  100% { transform: scale(1.08); }
+  100% { transform: scale(1.06); }
 }
 
 .hero-overlay {
@@ -585,9 +587,11 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(35, 4, 10, 0.65) 0%,
-    rgba(35, 4, 10, 0.75) 50%,
-    rgba(35, 4, 10, 0.92) 100%
+    rgba(10, 2, 4, 0.0) 0%,
+    rgba(10, 2, 4, 0.04) 30%,
+    rgba(15, 3, 6, 0.38) 55%,
+    rgba(18, 3, 6, 0.82) 75%,
+    rgba(18, 3, 6, 0.96) 100%
   );
 }
 
@@ -596,74 +600,78 @@ body {
   z-index: 2;
   max-width: 820px;
   color: #fff;
+  margin-bottom: 0.5rem;
+  background: radial-gradient(ellipse at center, rgba(18, 3, 6, 0.72) 0%, rgba(18, 3, 6, 0.4) 60%, rgba(18, 3, 6, 0) 100%);
+  padding: 1.5rem 1.5rem 0.5rem;
+  border-radius: 24px;
 }
 
 .hero-pill-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 1.25rem;
+  padding: 0.35rem 1.15rem;
   background: rgba(201, 154, 62, 0.25);
   border: 1px solid rgba(241, 223, 168, 0.6);
   backdrop-filter: blur(8px);
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   color: var(--gold-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .hero-title {
   font-family: var(--font-script);
-  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-size: clamp(2.6rem, 5.2vw, 4.2rem);
   font-weight: 400;
   color: var(--gold-light);
   line-height: 1.1;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.2rem;
 }
 
 .hero-names {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 1.25rem;
-  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.65rem;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
 }
 
 .hero-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-  max-width: 650px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
+  font-size: clamp(0.98rem, 1.8vw, 1.15rem);
+  max-width: 580px;
+  margin: 0 auto 1.35rem;
+  line-height: 1.5;
   color: #f7ede2;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.85rem;
   justify-content: center;
 }
 
 .scroll-down-prompt {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.85rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.65);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
+  gap: 0.35rem;
+  font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
@@ -1204,87 +1212,354 @@ body {
 }
 
 /* ==========================================================================
-   6. INTERACTIVE MEMORY MAP
+   6. INTERACTIVE MEMORY MAP (3 HEART MAPS)
    ========================================================================== */
 .map-section {
   background: var(--bg-cream);
+  position: relative;
+  overflow: hidden;
 }
 
-.map-pills-bar {
+/* Global View Mode Switcher Pills */
+.map-view-pills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
 }
 
-.map-pill {
-  padding: 0.55rem 1.25rem;
-  font-size: 0.9rem;
+.view-pill {
+  padding: 0.55rem 1.4rem;
+  font-size: 0.92rem;
   font-weight: 600;
   background: #fff;
-  border: 1px solid var(--border-light);
+  border: 1.5px solid var(--border-light);
   border-radius: 50px;
   color: var(--text-dark);
   cursor: pointer;
   box-shadow: var(--shadow-soft);
-  transition: var(--transition-fast);
+  transition: all 0.25s ease;
+  font-family: inherit;
 }
 
-.map-pill:hover,
-.map-pill.active {
+.view-pill:hover {
+  border-color: var(--gold-accent);
+  color: var(--primary-burgundy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.view-pill.active {
   background: var(--primary-burgundy);
   color: #fff;
-  border-color: var(--primary-burgundy);
+  border-color: var(--gold-accent);
+  box-shadow: 0 4px 15px rgba(114, 18, 38, 0.28);
 }
 
-.map-container-wrapper {
-  max-width: 980px;
+/* 3 Chutkus Hearts Grid */
+.hearts-map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1140px;
   margin: 0 auto;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 2px solid var(--gold-accent);
-  box-shadow: var(--shadow-strong);
+  justify-items: center;
+  align-items: stretch;
 }
 
-.memory-map-box {
+@media (max-width: 992px) {
+  .hearts-map-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 2.5rem;
+  }
+}
+
+/* Heart Map Card */
+.heart-map-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.75rem 1.25rem 1.5rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.2, 0, 0.2, 1), border-color 0.3s ease;
   width: 100%;
-  height: 500px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.heart-map-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--gold-accent);
+}
+
+/* Heart Map Wrapper with Heart-Shaped Drop Shadow */
+.heart-map-wrapper {
+  position: relative;
+  width: 280px;
+  height: 260px;
+  margin: 0 auto 1.35rem auto;
+  filter: drop-shadow(0 12px 20px rgba(61, 35, 20, 0.22)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  user-select: none;
+}
+
+/* Clipped Heart Shape Frame */
+.heart-map-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#heart-map-clip);
+  -webkit-clip-path: url(#heart-map-clip);
   background: #e5e3df;
+  overflow: hidden;
+}
+
+/* Leaflet Container inside Heart */
+.heart-leaflet-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #f7f3ec;
+}
+
+/* Illustrated Heart Art Image */
+.heart-art-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.heart-art-img.hidden-art {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Title that appears floating above the live map */
+.heart-top-title {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.85rem;
+  color: #3d2314;
+  pointer-events: none;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Only show top title overlay when live map is revealed */
+.heart-art-img.hidden-art ~ .heart-top-title {
+  opacity: 1;
+}
+
+/* Heart Border SVG Overlay */
+.heart-border-svg {
+  position: absolute;
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Card Content / Text */
+.heart-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.heart-category-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  margin-bottom: 0.25rem;
+}
+
+.heart-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--primary-burgundy);
+  margin: 0 0 0.4rem 0;
+}
+
+.heart-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-text-link {
+  color: var(--primary-burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.map-text-link:hover {
+  color: var(--gold-accent);
+}
+
+/* Action Buttons */
+.heart-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.btn-toggle-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--bg-cream);
+  color: var(--primary-burgundy);
+  border: 1px solid var(--gold-accent);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-toggle-view:hover {
+  background: var(--primary-burgundy);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-gmaps-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: #fff;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-gmaps-pill:hover {
+  border-color: var(--gold-accent);
+  color: var(--primary-burgundy);
+  background: var(--bg-cream);
+  transform: translateY(-1px);
+}
+
+/* Vintage Ribbon Pin on Live Leaflet Map */
+.vintage-heart-pin-anchor {
+  background: transparent !important;
+  border: none !important;
+}
+
+.vintage-map-marker {
+  display: inline-flex;
+  align-items: center;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+  cursor: pointer;
+  user-select: none;
+}
+
+.marker-pin-head {
+  font-size: 26px;
+  line-height: 1;
+  z-index: 2;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+.vintage-map-marker:hover .marker-pin-head {
+  transform: translateY(-6px) scale(1.15);
+}
+
+.marker-ribbon-tag {
+  background: #fdf7eb;
+  border: 1.5px solid #5a341e;
+  color: #3d2314;
+  font-family: 'Great Vibes', cursive, serif;
+  font-size: 1.2rem;
+  padding: 2px 9px 2px 6px;
+  border-radius: 4px;
+  margin-left: -6px;
+  white-space: nowrap;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
 }
 
 /* Custom Leaflet Popup Styling */
 .leaflet-popup-content-wrapper {
   border-radius: 16px;
   padding: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--gold-accent);
+  background: #fffdf9;
 }
 
-.map-popup-card {
-  max-width: 240px;
+.heart-map-popup {
+  max-width: 220px;
   text-align: center;
+  padding: 0.25rem;
 }
 
-.map-popup-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-}
-
-.map-popup-card h4 {
+.heart-map-popup h4 {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--primary-burgundy);
-  margin-bottom: 0.2rem;
+  margin: 0 0 0.2rem 0;
 }
 
-.map-popup-card p {
-  font-size: 0.85rem;
+.heart-map-popup p {
+  font-size: 0.82rem;
   color: var(--text-muted);
-  line-height: 1.4;
+  line-height: 1.35;
+  margin: 0 0 0.5rem 0;
+}
+
+.popup-gmaps-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary-burgundy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ==========================================================================
@@ -1821,6 +2096,67 @@ body {
   font-size: 0.85rem;
   color: var(--text-muted);
   font-style: italic;
+}
+
+/* Multi-Letter Section Enhancements */
+.letter-spacing-block {
+  margin-bottom: 3.5rem;
+}
+
+.letter-subtitle-highlight {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-burgundy);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.letter-highlight-special {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #8b1d35;
+  padding: 0.85rem 1.25rem;
+  background: rgba(139, 29, 53, 0.05);
+  border-left: 3px solid var(--primary-burgundy);
+  border-radius: 6px;
+  margin: 1.25rem 0;
+}
+
+.letter-highlight-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-burgundy);
+  line-height: 1.6;
+}
+
+/* Golden Wax Seal for Parents' Letter */
+.wax-seal.wax-seal-gold {
+  background: radial-gradient(circle, #d4af37, #996515);
+  border-color: #f7e1a0;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.wax-seal.wax-seal-gold:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
+}
+
+.envelope.open .wax-seal.wax-seal-gold {
+  background: radial-gradient(circle, #b8860b, #6b4c05);
+  border-color: #f1dfa8;
+}
+
+.letter-paper-parents {
+  border-color: #ebdcb9;
+  background: #fffdf8;
+}
+
+.sign-parents {
+  font-family: var(--font-script);
+  font-size: 2.85rem;
+  color: #8b1d35;
 }
 
 /* ==========================================================================
